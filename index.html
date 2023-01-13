@@ -1,0 +1,460 @@
+﻿
+<script type="text/javascript" src="functions.js"></script>
+<script type="text/javascript" src="dicionary.js"></script>
+<script type="text/javascript" src="create_text.js"></script>
+<script type="text/javascript" src="movies.js"></script>
+
+<script>
+
+function sorteia(item){
+	var nomes =  ["Qrutrix","Oruxeor","Ushan","Ugovras","Igoxium","Ataz","Ilrolius","Azadium","Oharad","Olozor","Qruprix","Qraqium","Oligron","Ophior","Equam","Grijahr","Aharis","Olzoxon","Aqinn","Aharise","Anydae","Atosh","Neharise","Estrea","Arexone","Nubis","Ulobelle","Rephaen","Udephyx","Ewaelle","Nughis","Chodeis","Asizith","Zivia","Phazohra","Nivile","Omiharise","Uzogaell","The Magnificent","The Crow","The Dread","The Dire One","The Venom Tongue","Raveneye","Proudstrike","Hell Grim","Fuse Hand","Bonebane","The Cursed","The Wild","The Delirious","The Marked One","The Legionnaire","Skullblood","Greatpelt","Thunderscar","Shieldbolt","Shadowblood","Conrad del Río","Davie","Moyse","Garner","Dandi","Willelm","Ivon","Bartholomew","Valter","Gregory","Tybalt","Auguinare","Dickory","Steuan","Harry","Gualtie","Tibbott","Geoff","Amaury","Jervis","Svenhylde","Hrigjold","Agagrdrifa","Hrurior","Skaldr","Svepul","Skaronul","Geimadra","Frileif","Regigabi","Hivif","Sanrun","Hjogjold","Hervif","Goronul","Gerun","Mipul","Rogjold","Ald","Skondul","Regirja","Thrugin","Sind","Satha","Svarja","Sannhildr","Santa","Hladmadra","Vala","Skolmold","Neldor","Beistina","Mitalar","Leokalyn","Alabyran","Herra","Thallan","Venwarin","Thuridan","Wysaro","Gaelin","Wysanorin","Aimon","Wysamoira","Akkar","Zyllana","Pirphal","Caiwarin","Beldroth","Triszumin","Folre","Lusandoral","Iefyr","Quinorin","Luirlan","Trisro","Kieran","Balrieth","Gaeleath","Traphine","Thuridan","Caiqirelle","Aolis","Olamaris","Elkhazel","Theris","Delmuth","Phifir","Travaran","Iangolor","Saria","Carlynn","Annallee","Dorsys","Tiriana","Qirel","Itylara","Farna","Ildilyntra","Raloydark","Ilsevel","Aralar","Daethie","Trisxina","Immianthe","Gilbanise","Daethie","Sylbalar","Lensa","Kylantha","Farric","Merlara","Genlar","Yathanae","Yelbella","Nushala","Elgella","Ratha","Venthana","Nalaea","Luharice","Ashera","Valxina","Faylen","Envalur","Tarasynora","Glynxisys","Alyndra","Valwraek","Gardrotir","Blazingmaul","Araborlug","Kragflayer","Bandraed","Hillbane","Elkdraic","Bonearm","Kuvreal","Goldriver","Orirerlun","Dragonshield","Bebaic","Cavethane","Grotmec","Bottleblade","Lorgruth","Cragthane","Grournirlun","Silverthane","Runmin","Blazingguard","Duldrur","Beastbasher","Glammag","Lightbrow","Adduk","Blackgrip","Dhummorli","Keghand","Umizzumri","Flatshoulder","Reinmeac","Redfury","Dosonlir","Brickshoulder","Hakkouth","Ashmail","Lokdrel","Blessedbender","Thargreasli","Oakenmace","Befaetalin","Strongbreaker","Bubrawynn","Merryriver","Brutatrud","Bloodhelm","Dhuznaegar","Greyarm","Groubaelynn","Axefury","Arakhusli","Darkbuster","Koleagith","Frostshield","Brubrure","Orcspine","Thumwuhulda","Heavybuster","Aradmogith","Merrymaul","Nazmaginn","Blazingrock","Ruldrutalyn","Orehide","Khourgatalyn","Warmrock","Karfisli","Orcmace","Ufrubo","Snowguard","Kandritelyn","Treasurebranch","Brolmeatelin","Warmdelver","Douraela","Wraithheart","Asseagit","Wyvernbeard","Gelippe","Drylameia","Kroutrera","Creope","Preoxdice","Scandrithippe","Klorpiybe","Clichilene","Vendruope","Ophiameia","Gledyestra","Driodcabe","Kluycleia","Iodhaedra","Coexpesia","Dulcaonache","Glidothye","Ebroecyra","Aopheoyche","Kalounestra","Pagone","Ykdora","Kreihaedra","Nudice","Bicyone","Pamecleia","Chriomnedora","Kloendrucyra","Breppioope","Kreontuope","Yiliope","Gurymeia","Voegea","Clurecyra","Kosypadia","Smouptioanta","Soucloeliope","Eiphnuyne","Iodmetane","Cryclodora","Xudreto","Drumusose","Gieyope","Chriises","Psokyrbe","Cintinara","Fophnice","Chrephnacyone","Oxoepeia","Psokupyle","Nohyia","Edupesia","Chreiphale","Preyyrbe","Rhypesia","Prechoenice","Chriosoeippe","Thubreothoe","Krirgimache","Chrelcophale"];
+
+//raça: Humano / Mostro / 
+// name: String
+// sexo: M/F/ND
+// idade: int
+// tipocorporal: fraco/ medio / forte
+// altura: float
+// peso: float
+// pele: negra / branca / parda / escamoso
+
+let personagens = [
+  { "id": 1, "raca": "Humano", "name": "Pedro","sexo": "M","idade": "17","tipocorporal": "17","altura": "17","peso": "17","pele": "17","cabelo": "17","olhos": "17","intelectual": "17","profissao": "estudante","hobbie": "colecionar","medo": "aranhas","sexualidade": "heterosexual",
+    "equipamentos": [  
+      { "id": 1, "arma": "Espada Simples" },
+      { "id": 2, "escudo": "Escudo Simples" }
+    ]
+  },
+  { "id": 2, "raca": "Humano", "name": "Kayla","sexo": "F","idade": "16","tipocorporal": "17","altura": "17","peso": "17","pele": "17","cabelo": "17","olhos": "17","intelectual": "17","profissao": "estudante","hobbie": "colecionar","medo": "aranhas","sexualidade": "heterosexual",
+    "equipamentos": [
+      { "id": 1, "arma": "Espada Simples" },
+      { "id": 2, "escudo": "Escudo Simples" }
+    ]
+  },
+  { "id": 3, "raca": "Humano", "name": "Aidan","sexo": "M","idade": "16","tipocorporal": "17","altura": "17","peso": "17","pele": "17","cabelo": "17","olhos": "17","intelectual": "17","profissao": "estudante","hobbie": "colecionar","medo": "aranhas","sexualidade": "heterosexual",
+    "equipamentos": [
+      { "id": 1, "arma": "Espada Simples" },
+      { "id": 2, "escudo": "Escudo Simples" }
+    ]
+  },
+  { "id": 4, "raca": "Humano", "name": "Kim","sexo": "F","idade": "18","tipocorporal": "17","altura": "17","peso": "17","pele": "17","cabelo": "17","olhos": "17","intelectual": "17","profissao": "estudante","hobbie": "colecionar","medo": "aranhas","sexualidade": "heterosexual",
+    "equipamentos": [
+      { "id": 1, "arma": "Espada Simples" },
+      { "id": 2, "escudo": "Escudo Simples" }
+    ]
+  },
+    { "id": 5, "raca": "Humano", "name": "Kim","sexo": "M","idade": "17","tipocorporal": "17","altura": "17","peso": "17","pele": "17","cabelo": "17","olhos": "17","intelectual": "17","profissao": "estudante","hobbie": "colecionar","medo": "aranhas","sexualidade": "heterosexual",
+    "equipamentos": [
+      { "id": 1, "arma": "Espada Simples" },
+      { "id": 2, "escudo": "Escudo Simples" }
+    ]
+  },
+    { "id": 6, "raca": "Humano", "name": "Thion","sexo": "M","idade": "19","tipocorporal": "17","altura": "17","peso": "17","pele": "17","cabelo": "17","olhos": "17","intelectual": "17","profissao": "estudante","hobbie": "colecionar","medo": "aranhas","sexualidade": "heterosexual",
+    "equipamentos": [
+      { "id": 1, "arma": "Espada Simples" },
+      { "id": 2, "escudo": "Escudo Simples" }
+    ]
+  },
+    { "id": 7, "raca": "Humano", "name": "If","sexo": "M","idade": "27","tipocorporal": "17","altura": "17","peso": "17","pele": "17","cabelo": "17","olhos": "17","intelectual": "17","profissao": "estudante","hobbie": "colecionar","medo": "aranhas","sexualidade": "heterosexual",
+    "equipamentos": [
+      { "id": 1, "arma": "Espada Simples" },
+      { "id": 2, "escudo": "Escudo Simples" }
+    ]
+  },
+    { "id": 8, "raca": "Humano", "name": "Tyunn","sexo": "F","idade": "37","tipocorporal": "17","altura": "17","peso": "17","pele": "17","cabelo": "17","olhos": "17","intelectual": "17","profissao": "estudante","hobbie": "colecionar","medo": "aranhas","sexualidade": "heterosexual",
+    "equipamentos": [
+      { "id": 1, "arma": "Espada Simples" },
+      { "id": 2, "escudo": "Escudo Simples" }
+    ]
+  },
+    { "id": 9, "raca": "Humano", "name": "Aun","sexo": "M","idade": "25","tipocorporal": "17","altura": "17","peso": "17","pele": "17","cabelo": "17","olhos": "17","intelectual": "17","profissao": "estudante","hobbie": "colecionar","medo": "aranhas","sexualidade": "heterosexual",
+    "equipamentos": [
+      { "id": 1, "arma": "Espada Simples" },
+      { "id": 2, "escudo": "Escudo Simples" }
+    ]
+  },
+    { "id": 10, "raca": "Humano", "name": "Tyorgrirn","sexo": "M","idade": "17","tipocorporal": "17","altura": "17","peso": "17","pele": "17","cabelo": "17","olhos": "17","intelectual": "17","profissao": "estudante","hobbie": "colecionar","medo": "aranhas","sexualidade": "heterosexual",
+    "equipamentos": [
+      { "id": 1, "arma": "Espada Simples" },
+      { "id": 2, "escudo": "Escudo Simples" }
+    ]
+  },
+    { "id": 11, "raca": "Humano", "name": "Vorrus","sexo": "M","idade": "19","tipocorporal": "17","altura": "17","peso": "17","pele": "17","cabelo": "17","olhos": "17","intelectual": "17","profissao": "estudante","hobbie": "colecionar","medo": "aranhas","sexualidade": "heterosexual",
+    "equipamentos": [
+      { "id": 1, "arma": "Espada Simples" },
+      { "id": 2, "escudo": "Escudo Simples" }
+    ]
+  },
+    { "id": 12, "raca": "Humano", "name": "Grafralf","sexo": "M","idade": "49","tipocorporal": "17","altura": "17","peso": "17","pele": "17","cabelo": "17","olhos": "17","intelectual": "17","profissao": "estudante","hobbie": "colecionar","medo": "aranhas","sexualidade": "heterosexual",
+    "equipamentos": [
+      { "id": 1, "arma": "Espada Simples" },
+      { "id": 2, "escudo": "Escudo Simples" }
+    ]
+  },
+    { "id": 13, "raca": "Humano", "name": "Raslerd","sexo": "M","idade": "33","tipocorporal": "17","altura": "17","peso": "17","pele": "17","cabelo": "17","olhos": "17","intelectual": "17","profissao": "estudante","hobbie": "colecionar","medo": "aranhas","sexualidade": "heterosexual",
+    "equipamentos": [
+      { "id": 1, "arma": "Espada Simples" },
+      { "id": 2, "escudo": "Escudo Simples" }
+    ]
+  },
+    { "id": 14, "raca": "Humano", "name": "Thrunskulr","sexo": "M","idade": "49","tipocorporal": "forte","altura": "17","peso": "17","pele": "17","cabelo": "17","olhos": "17","intelectual": "17","profissao": "estudante","hobbie": "colecionar","medo": "aranhas","sexualidade": "heterosexual",
+    "equipamentos": [
+      { "id": 1, "arma": "Espada Simples" },
+      { "id": 2, "escudo": "Escudo Simples" }
+    ]
+  },
+    { "id": 15, "raca": "Humano", "name": "Urhan","sexo": "M","idade": "49","tipocorporal": "normal","altura": "17","peso": "17","pele": "17","cabelo": "17","olhos": "17","intelectual": "17","profissao": "estudante","hobbie": "colecionar","medo": "aranhas","sexualidade": "heterosexual",
+    "equipamentos": [
+      { "id": 1, "arma": "Espada Simples" },
+      { "id": 2, "escudo": "Escudo Simples" }
+    ]
+  },
+    { "id": 16, "raca": "Humano", "name": "Ejamar","sexo": "M","idade": "49","tipocorporal": "normal","altura": "17","peso": "17","pele": "17","cabelo": "17","olhos": "17","intelectual": "17","profissao": "estudante","hobbie": "colecionar","medo": "aranhas","sexualidade": "heterosexual",
+    "equipamentos": [
+      { "id": 1, "arma": "Espada Simples" },
+      { "id": 2, "escudo": "Escudo Simples" }
+    ]
+  }
+];	
+	
+	
+	var verbo = ["salvar", "destruir", "procurar", "sequestrar", "fugir de", "fugir de", "atacar","Decifrar um enigma relacionado a"];
+	var obj = ["seu filho", "sua mãe", "seus tios", "uns monstros", "uma magia", "um anel",  "um talismã", "um tesouro", "um navio", "um item mágico", "seu pai", "seu mundo", "seus amigos", "seus inimigos"];
+	var comum = ["sua pequena fazenda","na sua grande fazenda","na sua grande casa","no seu trailer","seu minusculo apartamento","na sua grande Cobertura","numa Vila","no Condado","sua casa","seu pequeno planeta natal","seu pequena Cidade","nos fundos de um Bar","na Floresta","no Deserto","seu pequeno esconderijo","seu pequeno apartamento","na sua pequena Vila","seu pequeno apartamento"];
+	var chamado = ["recebe uma mensagem de socorro","herda um item amaldiçoado","recebe uma mensagem em seu computador","recebe uma mensagem","recebe uma carta convite","é convocado para uma aventura"];
+    var configuracao = ["vai comprar algumas coisas","participa da festa ","participa da festa de aniversário","vai trabalhar em um dia comum","fica em casa","cuida do seu jardim","brinca com seus cachorros","brinca com seu gato","alimenta seus peixeis no seu aquario","lê um livro","assiste um filme","limpa a casa","limpa seu carro","vai a um supermercado","briga com sua família","almoça com sua família","leva seu filho para a escola","vai para a escola","vai para o trabalho","brincam ao ar livre","joga uma partidade de futebol","vai a um fiplerama","navega na internet"]
+    var incercia = ["porque tem que trabalhar","porque é muito novo ","porque tem medo","porque tem que trabalhar com sua familia","porque tem filhos","porque oferece a tarefa ao seu mentor","porque fala que não é problema dele","porque redicularisa tudo aqui pois acha que é mentira","porque é contra sua religião","porque alega que é contra a lei de seu povo","porque fala que tem medo"]
+    var encontro = ["que o salva de inimigos","que o instrui a encontra-lo em um determinado lugar","o dá opção de escolha, abanonar o encarar a aventura","revela para ele que ele é especial", "faz um ritual de passagem para convence-lo", "manda olhar para seu reflexo e perceber que cresceu","manda a pensar sobre sua vida e questiona o seu futuro"]
+    var titulo1 = ["O Senhor","O Estudante","Caçadores","O Campeão","Gigantes","O Poeta","Os Piratas","O Homem","Fugindo","Guerra","A Mulher","O Rei","A fuga","A Sociedade","Uma bela","A Camuna","O Coração","O Presidente", "O Corajoso","O Jogo","O Código","O Assassino","O Amigo","Embalos","O Malvado", "O Boneco","A Dança","A Procura"]
+    var titulo2 = ["dos Aneis","nas Estrelas","de Paris","de Emoção","dos Campeões","de Ferro","de Aço","de Gelo","do Caribe","do Brasil","de Todos","de Nova York","Mulher", "Leão", "dos Mortos","do Ladrão", "do Assacino","do Rei","do Presitente","do Cantor","das Moscas", "das Espadas", "das Facas","da Terra", "do meu Cachorro", "Favorito", "das Galinhas", "Doente","das Moedas","no Computador","em Outra Dimenção","de sabado a Noite","na Noite","do Castelo","dos Reinos","do Filho"]
+    //descobre que...
+	var gatilho = ["seus tios estão mortos","seus pais estão mortos","seu lar pode estar ameaçado por ele está alí","está ameaçado pelo inimigo e tem um sonho ruim com ele","é especial, um efeito mágico acontece em sua frente","tem uma grande esperança em sua missão ao saber uma notícia","é especial, tem uma visão de seus antepassados e retoma sua coragem","toda sua família é morta","queimaram sua casa","especial pois leva um tombo e tem uma visão","especial, assim sonha com uma visão","especial, e ao toma drogas tem uma visão","especial ao fumar ervas e ali tem uma visão","recebeu uma carta, ao le-la muda suas idéias","é especial"]
+    var tema = ["Planos foram roubados, seu mentor emplica sua origem","Tem monstros atraz de você, voce deve fugir","Você é perseguido, seu mentor explica o que você é","Um novo mundo é revelado para você","Você conta que está atraz do seu filho","você encontra amigos que te ajudam a sobrevirer"]
+	
+	if (item == 0){
+	    valor = Math.floor(Math.random()*personagens.length);
+	    peg("HEROI").value = personagens[valor].name; 
+	    peg("genero_heroi").value = personagens[valor].sexo; 
+		
+		valor = Math.floor(Math.random()*personagens.length);
+		peg("MENTOR").value = personagens[valor].name; 
+		peg("genero_mentor").value = personagens[valor].sexo; 
+		
+		peg("PARCEIRO").value = rand_item(nomes);
+		peg("VILAO").value = rand_item(nomes);
+		peg("AUXVILAO").value = rand_item(nomes);
+		peg("INDECISO").value = rand_item(nomes);
+		peg("COMICO").value = rand_item(nomes);	
+		peg("DONZELA").value = rand_item(nomes);	
+
+		valor = Math.floor(Math.random()*personagens.length);
+		peg("COAJUVANTES1").value = personagens[valor].name; 
+		//peg("COAJUVANTES1SEXO").value = personagens[valor].sexo; 		
+		
+		
+		valor = Math.floor(Math.random()*personagens.length);
+		peg("COAJUVANTES2").value = personagens[valor].name; 
+		//peg("COAJUVANTES2SEXO").value = personagens[valor].sexo; 	
+		
+		
+		valor = Math.floor(Math.random()*personagens.length);
+		peg("COAJUVANTES3").value = personagens[valor].name; 
+		//peg("COAJUVANTES3SEXO").value = personagens[valor].sexo; 	
+		
+		
+		peg("COMUM").value = rand_item(comum);
+		peg("ACAO").value = rand_item(verbo) + " " + rand_item(obj);
+		peg("CHAMADO").value = rand_item(chamado);	
+		peg("CONFIGURACAO").value = rand_item(configuracao);
+		peg("INERCIA").value = rand_item(incercia);
+		peg("ENCONTRO").value = rand_item(encontro);
+		
+		peg("TITULO1").value = rand_item(titulo1);
+		peg("TITULO2").value = rand_item(titulo2);
+		peg("GATILHO").value = rand_item(gatilho);
+		peg("TEMA").value = rand_item(tema);
+		
+		
+	}else if (item == 1){
+		peg("ACAO").value = rand_item(verbo) + " " + rand_item(obj);
+	}else if (item == 2){
+	    valor = Math.floor(Math.random()*personagens.length);
+	    peg("HEROI").value = personagens[valor].name; 
+	    peg("genero_heroi").value = personagens[valor].sexo;  
+	}else if (item == 3){
+		valor = Math.floor(Math.random()*personagens.length);
+		peg("MENTOR").value = personagens[valor].name; 
+		peg("genero_mentor").value = personagens[valor].sexo; 
+	}else if (item == 4){
+		peg("PARCEIRO").value = rand_item(nomes);
+	}else if (item == 5){
+		peg("VILAO").value = rand_item(nomes);
+	}else if (item == 6){
+		peg("AUXVILAO").value = rand_item(nomes);
+	}else if (item == 7){
+		peg("INDECISO").value = rand_item(nomes);
+	}else if (item == 8){
+		peg("COMICO").value = rand_item(nomes);
+	}else if (item == 9){
+		valor = Math.floor(Math.random()*personagens.length);
+		peg("COAJUVANTES1").value = personagens[valor].name; 
+		//peg("COAJUVANTES1SEXO").value = personagens[valor].sexo; 
+	}else if (item == 10){
+		valor = Math.floor(Math.random()*personagens.length);
+		peg("COAJUVANTES2").value = personagens[valor].name; 
+		//peg("COAJUVANTES2SEXO").value = personagens[valor].sexo; 
+	}else if (item == 11){
+		valor = Math.floor(Math.random()*personagens.length);
+		peg("COAJUVANTES3").value = personagens[valor].name; 
+		//peg("COAJUVANTES3SEXO").value = personagens[valor].sexo; 	
+	}else if (item == 12){
+		peg("COMUM").value = rand_item(comum);
+	}else if (item == 13){
+		peg("CHAMADO").value = rand_item(chamado);
+	}else if (item == 20){
+		peg("CONFIGURACAO").value = rand_item(configuracao);
+	}else if (item == 16){
+		peg("ENCONTRO").value = rand_item(encontro);	
+	}else if (item == 21){
+		peg("TITULO1").value = rand_item(titulo1);
+	}else if (item == 22){
+		peg("TITULO2").value = rand_item(titulo2);		
+	}else if (item == 23){
+		peg("GATILHO").value = rand_item(gatilho);		
+	}else if (item == 24){
+		peg("TEMA").value = rand_item(tema);
+		
+		
+		
+	}else if (item == 15){
+		peg("INERCIA").value = rand_item(incercia);
+	}
+	
+	
+	sorteia_combo(peg("raca"));
+	sorteia_combo(peg("classe"));
+	sorteia_combo(peg("relacao"));
+	
+	
+}
+
+
+
+
+
+</script>
+<label class="title">Storytelling Generator 1.3</label><br>
+<label class="myname">Create by Prof. Paulo Alceu Rezende - 2021</label><br>
+
+
+<br> <label class="language">LANGUAGE</label>:
+  <select id="languages" onchange="mudaliguagem(this.value)">
+        <option value="en" selected >English</option>
+		<option value="pt-br">Portuguese-Brazil</option>
+  </select>
+</br><br>
+
+<table border=1>
+<tr><td colspan=12><label class="movies">MOVIES</label>:<br></td></tr>
+<tr><td><input onclick="muda_movies(1);" type="radio" name="filmes" checked value="1"></td><td ><label class="customize">CUSTOMIZE </label></td><td><button class="botoes_randomicos" onclick="sorteia(0);" type="button">!!!</button></td>
+<TD colspan=9></TD></tr>
+<tr><td><input onclick="muda_movies(2);" type="radio" name="filmes"></td><td><label class="starwars">STARWARS</label></td>
+<td><input onclick="muda_movies(18);" type="radio" name="filmes"></td><td><label class="KINGKONG">KINGKONG</label></td>
+<td><input onclick="muda_movies(16);" type="radio"  name="filmes"></td><td><label class="DRACULA">DRACULA</label></td>
+<td><input onclick="muda_movies(7);" type="radio"  name="filmes"></td><td><label class="lionking">LIONKING</label></td>
+<TD colspan=4></TD></tr>
+<tr><td><input onclick="muda_movies(19);" type="radio"  name="filmes"></td><td><label class="DUCKLING">THE UNGLY DUCKLING</label><br></td>
+<td><input onclick="muda_movies(14);" type="radio" name="filmes"></td><td><label class="ALADDIM">ALADDIM</label></td>
+<td><input onclick="muda_movies(17);" type="radio" name="filmes"></td><td><label class="SUPERMAN">SUPERMAN</label></td>
+<td><input onclick="muda_movies(4);" type="radio" name="filmes"></td><td><label class="MATRIX">MATRIX</label></td>
+<td><input onclick="muda_movies(8);" type="radio" name="filmes"></td><td><label class="over">OVER THE TOP</label></td>
+<td><input onclick="muda_movies(9);" type="radio" name="filmes"></td><td><label class="realsteel">REAL STEEL</label></td>
+</tr>
+<tr><td><input onclick="muda_movies(3);" type="radio"  name="filmes"></td><td><label class="lordofrings">LORD OF RINGS</label><br></td>
+<td><input onclick="muda_movies(5);" type="radio" name="filmes"></td><td><label class="harrypotter">HARRYPOTTER</label></td>
+<td><input onclick="muda_movies(15);" type="radio" name="filmes"></td><td><label class="THEWIZARDOFOZ">THE WIZARD OF OZ</label></td>
+<td colspan=6> </td>
+<tr><td><input onclick="muda_movies(6);" type="radio" name="filmes"></td><td><label class="NEMO">FINDING NEMO</label></td>
+<td><input onclick="muda_movies(6);" type="radio" name="filmes"></td><td><label class="ALICE">ALICE IN WORDERLAND</label></td>
+<td><input onclick="muda_movies(13);" type="radio"  name="filmes"></td><td><label class="GULLIVERS">GULLIVERS TRAVELS</label></td>
+<td><input onclick="muda_movies(12);" type="radio"   name="filmes"></td><td><label class="PINOCCHIO">PINOCCHIO</label></td>
+<TD colspan=4></TD></tr>
+<tr><td><input onclick="muda_movies(12);" type="radio" name="filmes"></td><td><label class="MIDSUMMER">A MIDSUMMER NIGHTS DREAM</label></td>
+<td><input onclick="muda_movies(6);" type="radio" name="filmes"></td><td><label class="BRIDGET ">BRIDGET JONES DIARY</label></td>
+<TD colspan=8></TD></tr>
+</tr>
+<tr><td><input onclick="muda_movies(20);" type="radio"  name="filmes"></td><td><label class="MACBETH">MACBETH</label><br></td>
+<td><input onclick="muda_movies(14);" type="radio" name="filmes"></td><td><label class="ROMEO">ROMEO AND JULIET</label></td>
+<td><input onclick="muda_movies(14);" type="radio" name="filmes"></td><td><label class="BREAKING">BREAKING BAD</label></td>
+<td><input onclick="muda_movies(10);" type="radio" name="filmes"></td><td><label class="pointbreak">POINT BREAK</label></td>
+<td><input onclick="muda_movies(11);" type="radio" name="filmes"></td><td><label class="fastandfurious1">FAST AND FURIOUS 1</label></td>
+<td colspan=2> </td>
+</tr>
+<tr><td><input onclick="muda_movies(12);" type="radio" name="filmes"></td><td><label class="SLEEPING">SLEEPING BEAUTY</label></td>
+<td><input onclick="muda_movies(6);" type="radio" name="filmes"></td><td><label class="BEAST">BEAUTY AND THE BEAST</label></td>
+<TD colspan=8></TD></tr>
+</tr>
+</table></br>
+
+
+
+
+<table border=1>
+<tr><td colspan=3><label class="PLOTS_TYPES">PLOTS TYPES</label>:<br></td></tr>
+<tr><td><input onclick="muda_plots(1);" checked type="radio"  name="PLOTS" id="PLOTS1"></td><td><label class="MONSTER">Overcome over Monster</label></td><td>Há uma força do mal que ameaça o nosso herói e/ou seu mundo. O herói deve lutar e matar esse monstro, coisa que nem sempre é fácil, mas ele sai triunfante e recebe uma grande recompensa. </td></tr>
+<tr><td><input onclick="muda_plots(2);" type="radio" name="PLOTS" id="PLOTS2"></td><td>Da Miséria à Riqueza</td><td>O nosso herói é insignificante e inferiorizado em relação aos outros, mas algo acontece e ele se eleva (superação/luta), mostra-se como um ser excepcional (vencedor/superior). </td></tr>
+<tr><td><input onclick="muda_plots(3);" type="radio" name="PLOTS"></td><td>A Busca</td><td>Na Busca o nosso herói precisa partir em uma viagem longa e perigosa e vai enfrentar todos os obstáculos até que triunfe. </td></tr>
+<tr><td><input onclick="muda_plots(4);" type="radio" name="PLOTS"></td><td>Viagem e Retorno</td><td>Embora também com base em uma viagem, este tipo de trama é muito diferente da Busca. Aqui, o herói viaja para fora do seu “mundo normal”, rumo a um lugar desconhecido e perigoso. Ele deve então escapar e voltar para a segurança de sua casa.  </td></tr>
+<tr><td><input onclick="muda_plots(5);" type="radio" name="PLOTS"></td><td>Comédia</td><td>Uma história feita de acontecimentos cômicos, normalmente envolvendo troca de identidade, mal-entendidos ou confusão, resultando em algo hilário.  </td></tr>
+<tr><td><input onclick="muda_plots(6);" type="radio" name="PLOTS"></td><td>Tragédia</td><td>Esta é a história sem final feliz. Enquanto os outros arquétipos possuem heróis triunfantes e monstros derrotados, este terreno toma um rumo diferente e termina na perda ou morte.   </td></tr>
+<tr><td><input onclick="muda_plots(7);" type="radio" name="PLOTS"></td><td>Renascimento</td><td>Traz o herói sucumbindo a morte ou a um feitiço obscuro — seja ele o sono, doença ou encantamento — antes de quebrá-lo e conseguir a redenção/ressureição. </td></tr>
+</table></br>
+
+
+
+<table border=1>
+<tr><td colspan=5><label  class="scenes">SCENES</label>:<br></td></tr>
+<tr><td><label class="catjouney">CAT JOURNEY</label></td><td><label class="herojouney">HERO JOURNEY</label></td><td><label class="savethecat">SAVE THE CAT</label></td><td> DATA<br></td><td>METADATA</td></tr>
+<tr><td colspan=5><label class="act1">ACT 1 (INITIAL AND CONFLICT)</label><br></td></tr>
+<tr><td>1 Comum</td><td>1 O Mundo Cotidiano</td><td>1 Imagem de abertura</td><td><input type="text" id="COMUM" name="COMUM" value="" SIZE=50><button class="botoes_randomicos" onclick="sorteia(12);" type="button">!</button></br></td><td>como sua história começa? O que estamos olhando? </td></tr>
+<tr><td>2 Configuração</td><td>---</td><td> 2 Configuração inicial</td><td><input type="text" id="CONFIGURACAO" name="CONFIGURACAO" value="" SIZE=50><button class="botoes_randomicos" onclick="sorteia(20);" type="button">!</button></br></td><td>conheça os personagens, entenda o que está em jogo, viva no mundo</td></tr>
+<tr><td>3 Chamado</td><td><label> 2 Chamado à aventura</td><td>3 Declaração da lição</td><td><input type="text" id="CHAMADO" name="CHAMADO" value="" SIZE=50><button class="botoes_randomicos" onclick="sorteia(13);" type="button">!</button></br></td><td>qual é a força motriz por trás de sua história? </td></tr>
+<tr><td>4 Inércia</td><td><label> 3 Recusa do chamado </td><td>-</td><td><input type="text" id="INERCIA" name="INERCIA" value="" SIZE=50><button class="botoes_randomicos" onclick="sorteia(15);" type="button">!</button></br></td><td>o heroi tenta esquivar do chamado, achando justificativas para não faze-lo</td></tr>
+<tr><td>5 Mentor</td><td> 4 Encontro com o mentor </td><td> -</td><td><input type="text" id="ENCONTRO" name="ENCONTRO" value="" SIZE=50><button class="botoes_randomicos" onclick="sorteia(16);" type="button">!</button></br></td><td>o mentor faz alguma ação para convencer o heroi de encarar a aventrura</td></tr>
+<tr><td>6 Gatilho</td><td> - </td><td> 4 Catalizador</td><td><input type="text" id="GATILHO" name="GATILHO" value="" SIZE=50><button class="botoes_randomicos" onclick="sorteia(23);" type="button">!</button></br></td><td>o que acontece para mudar o curso dos eventos normais?</td></tr>
+<tr><td>7 Debate e Decisão</td><td> -  </td><td> 5 Debate do tema</td><td><input type="text" id="TEMA" name="TEMA" value="" SIZE=50><button class="botoes_randomicos" onclick="sorteia(24);" type="button">!</button></br></td><td>é aqui que o personagem decide fazer algo a respeito. A pressão aumenta. </td></tr>
+<tr><td colspan=5><label class="act2">ACT 2 (DEVELOPMENT)</label><br></td></tr>
+<tr><td>8 Travessia</td><td> 5 Travessia do primeiro limiar </td><td> 6 Entrada ao Ato 2</td><td><input type="text" id="TRAVESSIA" name="TRAVESSIA" value="" SIZE=50><button class="botoes_randomicos" onclick="sorteia(16);" type="button">!</button></br></td><td>a decisão de agir é tomada e a história começa</td></tr>
+<tr><td>9 Provas</td><td> 6 Provas, aliados e inimigos  </td><td> 7 Trama B</td><td><input type="text" id="PROVA" name="PROVA" value="" SIZE=50><button class="botoes_randomicos" onclick="sorteia(20);" type="button">!</button></br></td><td>o que mais está acontecendo? Alguma outra história acontecendo? </td></tr>
+<tr><td>10 Jogos</td><td> - </td><td> 8 Diversão e jogos </td><td><input type="text" id="JOGOS" name="JOGOS" value="" SIZE=50><button class="botoes_randomicos" onclick="sorteia(17);" type="button">!</button></br></td><td>o heroi cumpre a “promessa da premissa”.  </td></tr>
+<tr><td>11 Meio</td><td> - </td><td> 9 Ponto Médio </td><td><input type="text" id="MEIO" name="MEIO" value="" SIZE=50><button class="botoes_randomicos" onclick="sorteia(17);" type="button">!</button></br></td><td>as coisas mudam. O heroi  descobre uma nova maneira de comprir o objetivo.</td></tr>
+<tr><td>12 Caverna</td><td> 7 Aproximação da caverna secreta </td><td> 10 Inimigos se aproximam </td><td><input type="text" id="CAVERNA" name="CAVERNA" value="" SIZE=50><button class="botoes_randomicos" onclick="sorteia(17);" type="button">!</button></br></td><td>seu objetivo é ofuscado pela  jornada do antagonista para derrotá-lo. </td></tr> 
+<tr><td colspan=5><label class="act3">ACT 3 (CLIMAX)</label><br></td></tr>
+<tr><td>13 Poço</td><td> ---  </td><td> 11 Tudo está perdido</td><td><input type="text" id="TUDO" name="TUDO" value="" SIZE=50><button class="botoes_randomicos" onclick="sorteia(14);" type="button">!</button></br></td><td>quando o heroi pensa que pode vencê-los, ele sofre sua maior derrota. </td></tr>
+<tr><td>14 Desolação</td><td> ---  </td><td> 12 Desolação / Noite escura</td><td><input type="text" id="DESOLACAO" name="DESOLACAO" value="" SIZE=50><button class="botoes_randomicos" onclick="sorteia(14);" type="button">!</button></br></td><td>o heroi quer desistir. Tudo deu errado. </td></tr>
+<tr><td>15 Epifania</td><td> 8 A Provação  </td><td> 13 Entrada ao Ato 3 / 14 Finale </td><td><input type="text" id="EPIFANIA" name="EPIFANIA" value="" SIZE=50><button class="botoes_randomicos" onclick="sorteia(14);" type="button">!</button></br></td><td>algo volta ou acontece e convence o personagem a seguir em frente. <br> vemos tudo o que os personagens estão dispostos a fazer para vencer essa luta.</td></tr>
+<tr><td colspan=5><label class="act4">ACT 4 (OUTCOME)</label><br></td></tr>
+<tr><td>16 Prêmio</td><td> 9 A recompensa / Prêmio </td><td rowspan=4> 15 Imagem final</td><td><input type="text" id="PREMIO" name="PREMIO" value="" SIZE=50><button class="botoes_randomicos" onclick="sorteia(18);" type="button">!</button></br></td><td> Os herois recebem parabens ou um premio</td></tr>
+<tr><td>17 Caminho</td><td> 10 O caminho de volta </td><td><input type="text" id="CAMINHO" name="CAMINHO" value="" SIZE=50><button class="botoes_randomicos" onclick="sorteia(19);" type="button">!</button></br></td><td>O Heroi volta para o inicio</td></tr>
+<tr><td>18 Evolução</td><td> 11 A ressurreição </td><td><input type="text" id="RESSURREICAO" name="RESSURREICAO" value="" SIZE=50><button class="botoes_randomicos" onclick="sorteia(19);" type="button">!</button></br></td><td>Ele percebe que evoluiu, sua missão foi cumprida</td></tr>
+<tr><td>19 Elixir</td><td> 12 O retorno com o elixir </td><td><input type="text" id="RETORNO" name="RETORNO" value="" SIZE=50><button class="botoes_randomicos" onclick="sorteia(19);" type="button">!</button></br></td><td>Ultima imagem, pode ter continuação?</td></tr>
+</table></br>
+
+
+
+<table border=1>
+<tr><td colspan=1>ARQUÉTIPOS (PROTAGONISTAS):</td><td><input type="checkbox" id="Smurfette_ck"> <label class="Smurfette">Smurfette Effect (just a female protagonist)</label> </td></tr>
+<tr><td>HEROI/PROTAGONISTA</td><td> <input type="text" id="HEROI" name="HEROI" value="">
+<select id="genero_heroi" ><option value="X" selected >x</option><option value="F">♀</option><option value="M">♂</option></select>
+
+RAÇA: <select id="raca">
+<option value="001" selected >Humano</option>
+<option value="002">Robo</option>
+<option value="003">Monstro</option>
+<option value="004">Zumbi</option>
+<option value="005">Vampiro(a)</option>
+<option value="006">Alienigena</option>
+<option value="007">Animal</option>
+<option value="008">Fantasma</option>
+<option value="009">Elfo(a)</option>
+<option value="010">Anão</option>
+<option value="011">Gigante</option>
+<option value="012">Dragão/Dragoa</option>
+<option value="013">Fada</option>
+<option value="014">Esqueleto</option>
+</select> 
+
+<label class="Class">Class</label>: <select id="classe">
+<option value="001" selected >Arqueiro(a)</option>
+<option value="002">Cavaleiro(a)</option>
+<option value="003">Garçon</option>
+<option value="004">Mago/Feiticeira</option>
+<option value="005">Monges</option>
+<option value="006">Campones(a)</option>
+<option value="007">Piratas</option>
+<option value="006">Necromante</option>
+<option value="007">Bruxo(a)</option>
+<option value="008">Hacker/Programador(a)</option>
+<option value="009">Peixe</option>
+<option value="010">Cozinheiro(a)</option>
+<option value="011">Paladino(a)</option>
+<option value="012">Motorista</option>
+<option value="013">Ladrão/Ladra</option>
+<option value="014">Bardo/Músico</option>
+<option value="015">Bárbaro(a)</option>
+<option value="016">Policial</option>
+<option value="017">Sereia/Tritão</option>
+</select> 
+
+RELAÇÂO COM O HEROI: 
+<select id="relacao">
+<option value="001" selected >Nenhuma</option>
+<option value="002">Tio/Tia</option>
+<option value="003">Pai/Mãe</option>
+<option value="004">Irmão/Irmã</option>
+<option value="005">Primo(a)</option>
+<option value="006">Amigo(a)</option>
+<option value="007">Recrutado(a) sob pagamento</option>
+<option value="008">Forçado(a)/Sequestro</option>
+<option value="009">Professor(a)/Mestre(a)</option>
+<option value="010">Tutor(a)</option>
+<option value="011">Padrastro/Madrastra</option>
+<option value="012">Neto(a)</option>
+<option value="013">Vizinho(a)</option>
+<option value="014">Sogro(a)</option>
+<option value="015">Esposo(a)</option>
+<option value="016">Namorado(a)</option>
+<option value="017">Noivo(a)</option>
+<option value="018">Cunhado(a)</option>
+<option value="019">Padrinho/Madrinha</option>
+<option value="020">Avô/Avó</option>
+</select>
+
+<button class="botoes_randomicos" onclick="sorteia(2);" type="button">!</button></td></tr>
+<tr><td>MENTOR                   </td><td> <input type="text" id="MENTOR" value="">  <select id="genero_mentor" >  <option value="X" selected >x</option><option value="F">♀</option><option value="M">♂</option></select><button class="botoes_randomicos" onclick="sorteia(3);" type="button">!</button></td></tr>
+<tr><td>ORELHA/PARCEIRO/ALIADO   </td><td><input type="text" id="PARCEIRO" value=""> <select id="genero_parceiro" ><option value="X" selected >x</option><option value="F">♀</option><option value="M">♂</option></select><button class="botoes_randomicos" onclick="sorteia(4);" type="button">!</button></td></tr>
+<tr><td>SOMBRA/VILAO/ANTAGONISTA </td><td><input type="text" id="VILAO" value="">    <select id="genero1" ><option value="X" selected >x</option><option value="F">♀</option><option value="M">♂</option></select><button class="botoes_randomicos" onclick="sorteia(5);" type="button">!</button></td></tr>
+<tr><td>ORELHA/AUXVILÃO          </td><td><input type="text" id="AUXVILAO" value=""> <select id="genero1" ><option value="X" selected >x</option><option value="F">♀</option><option value="M">♂</option></select><button class="botoes_randomicos" onclick="sorteia(6);" type="button">!</button></td></tr>
+<tr><td>INDECISO                 </td><td><input type="text" id="INDECISO" value=""> <select id="genero1" ><option value="X" selected >x</option><option value="F">♀</option><option value="M">♂</option></select><button class="botoes_randomicos" onclick="sorteia(7);" type="button">!</button></td></tr>
+<tr><td>PÍCARO/CÔMICO            </td><td><input type="text" id="COMICO" value="">   <select id="genero1" ><option value="X" selected >x</option><option value="F">♀</option><option value="M">♂</option></select><button class="botoes_randomicos" onclick="sorteia(8);" type="button">!</button></td></tr>
+<tr><td>DONZELA                  </td><td><input type="text" id="DONZELA" value="">  <select id="genero1" ><option value="X" selected >x</option><option value="F">♀</option><option value="M">♂</option></select><button class="botoes_randomicos" onclick="sorteia(8);" type="button">!</button></td></tr>
+</table>
+
+
+  
+
+</br>
+<table border=1>
+<tr><td colspan=2>ARQUÉTIPOS (COAJUVANTES):</td></tr>
+<tr><td>COAJUVANTE 1</td><td> <input type="text" id="COAJUVANTES1" name="COAJUVANTES1" value=""><select id="genero1" ><option value="X" selected >x</option><option value="F">♀</option><option value="M">♂</option></select><button class="botoes_randomicos" onclick="sorteia(9);" type="button">!</button></td></tr>
+<tr><td>COAJUVANTE 2</td><td> <input type="text" id="COAJUVANTES2" name="COAJUVANTES2" value=""><select id="genero1" ><option value="X" selected >x</option><option value="F">♀</option><option value="M">♂</option></select><button class="botoes_randomicos" onclick="sorteia(10);" type="button">!</button></td></tr>
+<tr><td>COAJUVANTE 3</td><td> <input type="text" id="COAJUVANTES3" name="COAJUVANTES3" value=""><select id="genero1" ><option value="X" selected >x</option><option value="F">♀</option><option value="M">♂</option></select><button class="botoes_randomicos" onclick="sorteia(11);" type="button">!</button></td></tr>
+</table>
+</br>
+
+<table border=1>
+<tr><td colspan=2>DETALHES:</td></tr>
+<tr><td>TITULO <input type="text" id="TITULO1" value=""  SIZE=50><button class="botoes_randomicos" onclick="sorteia(21);" type="button">!</button>
+  <input type="text" id="TITULO2" value=""  SIZE=50><button class="botoes_randomicos" onclick="sorteia(22);" type="button">!</button></td></tr>
+<tr><td>OBJETIVO/PROMESSA <input type="text" id="ACAO" value=""  SIZE=50><button class="botoes_randomicos" onclick="sorteia(1);" type="button">!</button></td></tr>
+</table>
+
+</br></br></br>
+<button onclick="gerar();" type="button"><label  class="tail">CREATE TAIL</label></button>
+</br></br></br>
+
+
+<textarea id="story" name="story" rows="50" cols="200">
+
+</textarea>
+
+</br></br>
+<label  class="references">REFERENCES</label>: </br>
+Christopher Vogler</br>
+Joseph Campbell</br>
+https://www.brunocrispim.com/post/o-m%C3%A9todo-save-the-cat</br>
+https://neilpatel.com/br/blog/jornada-do-heroi/</br>
+https://viltoreis.com/save-the-cat/</br>
+https://viltoreis.com/a-jornada-do-heroi/</br>
+http://www.roteirodecinema.com.br/manuais/screenwriter.sites.uol.com.br/dramaturgia.doc.htm</br>
+7 TRAMAS BASICOS - https://medium.com/nano-fregonese/7-tramas-b%C3%A1sicas-para-a-sua-hist%C3%B3ria-e-para-a-sua-marca-6ce7b5bde0e9 - Future Learn, com base no livro de Christopher Booker</br></br>
