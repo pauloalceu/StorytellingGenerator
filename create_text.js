@@ -10,7 +10,9 @@ function gerar(){
 	
 	texto += "VERSÃO RESUMIDA\n";
 	texto += "\n";	
-	texto += "TITULO: " + peg("TITULO1").value + " " + peg("TITULO2").value + "       \n\n";
+	texto += "TITULO: " + peg("TITULO1").value + " " + peg("TITULO2").value + "       \n";
+	texto += "TIPOS DE ENREDO: \n";
+	texto += "\n";
 	//RESUMO
 	if(peg("genero_heroi").value=="M"){
     texto += "   O nosso " + palavra(["corajoso ","valente ", "notável ","audaz ", "ousado ", "audacioso ", "destemido ", "arrojado ", "intrépido "]) + palavra(["heroi", "campeão", "paladino", "protetor", "defensor"]) + " é o jovem " + heroi + "\n";

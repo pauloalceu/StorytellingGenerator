@@ -28,3 +28,4 @@ function ShowResults(value, index, ar) {
 function sorteia_combo(combo){
 	combo.selectedIndex = Math.floor(Math.random() * combo.length);
 }	
+

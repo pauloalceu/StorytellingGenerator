@@ -1,0 +1,1575 @@
+﻿
+<script type="text/javascript" src="functions.js"></script>
+<script type="text/javascript" src="dicionary.js"></script>
+<script type="text/javascript" src="create_text.js"></script>
+<script type="text/javascript" src="movies.js"></script>
+<script type="text/javascript" src="sorteia.js"></script>
+
+
+<label class="title">Storytelling Generator 1.4</label><br>
+<label class="myname">Create by Prof. Paulo Alceu Rezende - 2021/2026</label><br>
+
+<style>
+.td-small { font-size: 12px; }
+
+</style>
+
+<br> <label class="language">Language</label>:
+  <select id="languages" onchange="mudaliguagem(this.value)">
+        <option value="en" selected >English</option>
+		<option value="pt-br">Portuguese-Brazil</option>
+  </select>
+</br><br>
+
+<table border=1>
+<tr><td colspan=12><label class="movies"><b>MOVIES</b></label>:<br></td></tr>
+<tr>
+<td><input onclick="muda_movies(1);"  type="radio" name="filmes" checked value="1"></td><td ><label class="customize">CUSTOMIZE </label></td><td><button class="botoes_randomicos" onclick="sorteia(0);" type="button">!!!</button></td>
+<TD colspan=9>RANDOMIZE</TD></tr>
+<tr>
+<td><input onclick="muda_movies(2);"  type="radio" name="filmes"></td><td class="td-small"><label class="starwars">Star Wars</label></td>
+<td><input onclick="muda_movies(18);" type="radio" name="filmes"></td><td class="td-small"><label class="KINGKONG">King Kong</label></td>
+<td><input onclick="muda_movies(16);" type="radio" name="filmes"></td><td class="td-small"><label class="DRACULA">DRACULA</label></td>
+<td><input onclick="muda_movies(7);"  type="radio" name="filmes"></td><td class="td-small"><label class="lionking">LIONKING</label></td>
+<TD colspan=4></TD></tr>
+<tr>
+<td><input onclick="muda_movies(19);" type="radio" name="filmes"></td><td class="td-small"><label class="DUCKLING">THE UNGLY DUCKLING</label><br></td>
+<td><input onclick="muda_movies(14);" type="radio" name="filmes"></td><td class="td-small"><label class="ALADDIM">ALADDIM</label></td>
+<td><input onclick="muda_movies(17);" type="radio" name="filmes"></td><td class="td-small"><label class="SUPERMAN">SUPERMAN</label></td>
+<td><input onclick="muda_movies(4);"  type="radio" name="filmes"></td><td class="td-small"><label class="MATRIX">MATRIX</label></td>
+<td><input onclick="muda_movies(8);"  type="radio" name="filmes"></td><td class="td-small"><label class="over">OVER THE TOP</label></td>
+<td><input onclick="muda_movies(9);"  type="radio" name="filmes"></td><td class="td-small"><label class="realsteel">REAL STEEL</label></td>
+</tr>
+<tr>
+<td><input onclick="muda_movies(3);"  type="radio" name="filmes"></td><td class="td-small"><label class="lordofrings">LORD OF RINGS</label><br></td>
+<td><input onclick="muda_movies(5);"  type="radio" name="filmes"></td><td class="td-small"><label class="harrypotter">HARRYPOTTER</label></td>
+<td><input onclick="muda_movies(15);" type="radio" name="filmes"></td><td class="td-small"><label class="THEWIZARDOFOZ">THE WIZARD OF OZ</label></td>
+<td colspan=6> </td>
+<tr>
+<td><input onclick="muda_movies(6);"  type="radio" name="filmes"></td><td class="td-small"><label class="NEMO">FINDING NEMO</label></td>
+<td><input onclick="muda_movies(13);" type="radio" name="filmes"></td><td class="td-small"><label class="GULLIVERS">GULLIVERS TRAVELS</label></td>
+<td><input onclick="muda_movies(12);" type="radio" name="filmes"></td><td class="td-small"><label class="PINOCCHIO">PINOCCHIO</label></td>
+<TD colspan=4></TD></tr>
+<tr>
+<td><input onclick="muda_movies(12);" type="radio" name="filmes"></td><td class="td-small"><label class="MIDSUMMER">A MIDSUMMER NIGHTS DREAM</label></td>
+<td><input onclick="muda_movies(6);"  type="radio" name="filmes"></td><td class="td-small"><label class="BRIDGET ">BRIDGET JONES DIARY</label></td>
+<td><input onclick="muda_movies(21);"  type="radio" name="filmes"></td><td class="td-small"><label class="CONDE ">Le Comte de Monte-Cristo</label></td>
+
+<TD colspan=8></TD></tr>
+</tr>
+<tr>
+<td><input onclick="muda_movies(20);" type="radio" name="filmes"></td><td class="td-small"><label class="MACBETH">MACBETH</label><br></td>
+<td><input onclick="muda_movies(22);" type="radio" name="filmes"></td><td class="td-small"><label class="ROMEO">Romeo and Juliet</label></td>
+<td><input onclick="muda_movies(14);" type="radio" name="filmes"></td><td class="td-small"><label class="BREAKING">BREAKING BAD</label></td>
+<td><input onclick="muda_movies(10);" type="radio" name="filmes"></td><td class="td-small"><label class="pointbreak">POINT BREAK</label></td>
+<td><input onclick="muda_movies(11);" type="radio" name="filmes"></td><td class="td-small"><label class="fastandfurious1">FAST AND FURIOUS 1</label></td>
+<td colspan=2> </td>
+</tr>
+<tr>
+<td><input onclick="muda_movies(12);" type="radio" name="filmes"></td><td class="td-small"><label class="SLEEPING">SLEEPING BEAUTY</label></td>
+<td><input onclick="muda_movies(6);" type="radio" name="filmes"></td><td class="td-small"><label class="BEAST">BEAUTY AND THE BEAST</label></td>
+<td><input onclick="muda_movies(20);" type="radio" name="filmes"></td><td class="td-small"><label class="ALICE">Alice in Wonderland</label></td>
+<TD colspan=8></TD></tr>
+</tr>
+</table></br>
+
+
+
+
+<table border=1>
+<tr><td colspan=3><label class="PLOTS_TYPES"><b>PLOTS TYPES</b></label>:<br></td></tr>
+<tr><td><input onclick="muda_plots(1);" type="radio" name="PLOTS" id="PLOTS1" checked ></td><td class="td-small"><label class="MONSTER">Overcome over Monster</label></td><td class="td-small">Há uma força do mal que ameaça o nosso herói e/ou seu mundo. O herói deve lutar e matar esse monstro, coisa que nem sempre é fácil, mas ele sai triunfante e recebe uma grande recompensa. </td></tr>
+<tr><td><input onclick="muda_plots(2);" type="radio" name="PLOTS" id="PLOTS2"></td><td class="td-small"><label class="MISERY">From Misery to Wealth</label></td><td class="td-small">O nosso herói é insignificante e inferiorizado em relação aos outros, mas algo acontece e ele se eleva (superação/luta), mostra-se como um ser excepcional (vencedor/superior). </td></tr>
+<tr><td><input onclick="muda_plots(3);" type="radio" name="PLOTS" id="PLOTS3"></td><td class="td-small"><label class="Busca">The Search</label></td><td class="td-small">Na Busca o nosso herói precisa partir em uma viagem longa e perigosa e vai enfrentar todos os obstáculos até que triunfe. </td></tr>
+<tr><td><input onclick="muda_plots(4);" type="radio" name="PLOTS" id="PLOTS4"></td><td class="td-small"><label class="Viagem">Trip and Return</label></td><td class="td-small">Embora também com base em uma viagem, este tipo de trama é muito diferente da Busca. Aqui, o herói viaja para fora do seu “mundo normal”, rumo a um lugar desconhecido e perigoso. Ele deve então escapar e voltar para a segurança de sua casa.  </td></tr>
+<tr><td><input onclick="muda_plots(5);" type="radio" name="PLOTS" id="PLOTS5"></td><td class="td-small"><label class="Comedia">Comédia</label></td><td class="td-small">Uma história feita de acontecimentos cômicos, normalmente envolvendo troca de identidade, mal-entendidos ou confusão, resultando em algo hilário.  </td></tr>
+<tr><td><input onclick="muda_plots(6);" type="radio" name="PLOTS" id="PLOTS6"></td><td class="td-small"><label class="Tragedia">Tragédia</label></td><td class="td-small">Esta é a história sem final feliz. Enquanto os outros arquétipos possuem heróis triunfantes e monstros derrotados, este terreno toma um rumo diferente e termina na perda ou morte.   </td></tr>
+<tr><td><input onclick="muda_plots(7);" type="radio" name="PLOTS" id="PLOTS7"></td><td class="td-small"><label class="Renascimento">Renascimento</label></td><td class="td-small">Traz o herói sucumbindo a morte ou a um feitiço obscuro — seja ele o sono, doença ou encantamento — antes de quebrá-lo e conseguir a redenção/ressureição. </td></tr>
+</table></br>
+
+
+
+<table border=1>
+<tr><td colspan=5><label  class="scenes"><b>SCENES</b></label>:<br></td></tr>
+<tr><td><label class="catjouney">CAT JOURNEY</label></td><td><label class="herojouney">HERO JOURNEY</label></td><td><label class="savethecat">SAVE THE CAT</label></td><td> DATA<br></td><td>METADATA</td></tr>
+<tr><td colspan=5><label class="act1">ACT 1 (INITIAL AND CONFLICT)</label><br></td></tr>
+<tr><td class="td-small">1 Comum</td><td>1 O Mundo Cotidiano</td><td class="td-small">1 Imagem de abertura</td><td><input type="text" id="COMUM" name="COMUM" value="" SIZE=80><button class="botoes_randomicos" onclick="sorteia(12);" type="button">!</button></br></td><td class="td-small">como sua história começa? O que estamos olhando? </td></tr>
+<tr><td class="td-small">2 Configuração</td><td>---</td><td class="td-small"> 2 Configuração inicial</td><td><input type="text" id="CONFIGURACAO" name="CONFIGURACAO" value="" SIZE=80><button class="botoes_randomicos" onclick="sorteia(20);" type="button">!</button></br></td><td class="td-small">conheça os personagens, entenda o que está em jogo, viva no mundo</td></tr>
+<tr><td class="td-small">3 Chamado</td><td class="td-small"><label> 2 Chamado à aventura</td><td class="td-small">3 Declaração da lição</td><td><input type="text" id="CHAMADO" name="CHAMADO" value="" SIZE=80><button class="botoes_randomicos" onclick="sorteia(13);" type="button">!</button></br></td><td class="td-small">qual é a força motriz por trás de sua história? </td></tr>
+<tr><td class="td-small">4 Inércia</td><td class="td-small"><label> 3 Recusa do chamado </td><td class="td-small">-</td><td><input type="text" id="INERCIA" name="INERCIA" value="" SIZE=80><button class="botoes_randomicos" onclick="sorteia(15);" type="button">!</button></br></td><td class="td-small">o heroi tenta esquivar do chamado, achando justificativas para não faze-lo</td></tr>
+<tr><td class="td-small">5 Mentor</td><td class="td-small"> 4 Encontro com o mentor </td><td class="td-small"> -</td><td><input type="text" id="ENCONTRO" name="ENCONTRO" value="" SIZE=80><button class="botoes_randomicos" onclick="sorteia(16);" type="button">!</button></br></td><td class="td-small">o mentor faz alguma ação para convencer o heroi de encarar a aventrura</td></tr>
+<tr><td class="td-small">6 Gatilho</td><td class="td-small"> - </td><td> 4 Catalizador</td><td class="td-small"><input type="text" id="GATILHO" name="GATILHO" value="" SIZE=80><button class="botoes_randomicos" onclick="sorteia(23);" type="button">!</button></br></td><td class="td-small">o que acontece para mudar o curso dos eventos normais?</td></tr>
+<tr><td class="td-small">7 Debate e Decisão</td><td class="td-small"> -  </td><td class="td-small"> 5 Debate do tema</td><td class="td-small"><input type="text" id="TEMA" name="TEMA" value="" SIZE=80><button class="botoes_randomicos" onclick="sorteia(24);" type="button">!</button></br></td><td class="td-small">é aqui que o personagem decide fazer algo a respeito. A pressão aumenta. </td></tr>
+<tr><td colspan=5><label class="act2">ACT 2 (DEVELOPMENT)</label><br></td></tr>
+<tr><td class="td-small">8 Travessia</td><td class="td-small"> 5 Travessia do primeiro limiar </td><td class="td-small"> 6 Entrada ao Ato 2</td><td class="td-small"><input type="text" id="TRAVESSIA" name="TRAVESSIA" value="" SIZE=80><button class="botoes_randomicos" onclick="sorteia(16);" type="button">!</button></br></td><td class="td-small">a decisão de agir é tomada e a história começa</td></tr>
+<tr><td class="td-small">9 Provas</td><td class="td-small"> 6 Provas, aliados e inimigos  </td><td class="td-small"> 7 Trama B</td><td class="td-small"><input type="text" id="PROVA" name="PROVA" value="" SIZE=80><button class="botoes_randomicos" onclick="sorteia(20);" type="button">!</button></br></td><td class="td-small">o que mais está acontecendo? Alguma outra história acontecendo? </td></tr>
+<tr><td class="td-small">10 Jogos</td><td class="td-small"> - </td><td class="td-small"> 8 Diversão e jogos </td><td class="td-small"><input type="text" id="JOGOS" name="JOGOS" value="" SIZE=80><button class="botoes_randomicos" onclick="sorteia(17);" type="button">!</button></br></td><td class="td-small">o heroi cumpre a “promessa da premissa”.  </td></tr>
+<tr><td class="td-small">11 Meio</td><td class="td-small"> - </td><td class="td-small"> 9 Ponto Médio </td><td class="td-small"><input type="text" id="MEIO" name="MEIO" value="" SIZE=80><button class="botoes_randomicos" onclick="sorteia(17);" type="button">!</button></br></td><td class="td-small">as coisas mudam. O heroi  descobre uma nova maneira de comprir o objetivo.</td></tr>
+<tr><td class="td-small">12 Caverna</td><td class="td-small"> 7 Aproximação da caverna secreta </td><td class="td-small"> 10 Inimigos se aproximam </td><td class="td-small"><input type="text" id="CAVERNA" name="CAVERNA" value="" SIZE=80><button class="botoes_randomicos" onclick="sorteia(17);" type="button">!</button></br></td><td class="td-small">seu objetivo é ofuscado pela  jornada do antagonista para derrotá-lo. </td></tr> 
+<tr><td colspan=5><label class="act3">ACT 3 (CLIMAX)</label><br></td></tr>
+<tr><td class="td-small">13 Poço</td><td class="td-small"> ---  </td><td class="td-small"> 11 Tudo está perdido</td><td class="td-small"><input type="text" id="TUDO" name="TUDO" value="" SIZE=80><button class="botoes_randomicos" onclick="sorteia(14);" type="button">!</button></br></td><td class="td-small">quando o heroi pensa que pode vencê-los, ele sofre sua maior derrota. </td></tr>
+<tr><td class="td-small">14 Desolação</td><td class="td-small"> ---  </td><td class="td-small"> 12 Desolação / Noite escura</td><td class="td-small"><input type="text" id="DESOLACAO" name="DESOLACAO" value="" SIZE=80><button class="botoes_randomicos" onclick="sorteia(14);" type="button">!</button></br></td><td class="td-small">o heroi quer desistir. Tudo deu errado. </td></tr>
+<tr><td class="td-small">15 Epifania</td><td class="td-small"> 8 A Provação  </td><td class="td-small"> 13 Entrada ao Ato 3 / 14 Finale </td><td class="td-small"><input type="text" id="EPIFANIA" name="EPIFANIA" value="" SIZE=80><button class="botoes_randomicos" onclick="sorteia(14);" type="button">!</button></br></td><td class="td-small">algo volta ou acontece e convence o personagem a seguir em frente. <br> vemos tudo o que os personagens estão dispostos a fazer para vencer essa luta.</td></tr>
+<tr><td colspan=5><label class="act4">ACT 4 (OUTCOME)</label><br></td></tr>
+<tr><td class="td-small">16 Prêmio</td><td class="td-small"> 9 A recompensa / Prêmio </td><td rowspan=4  class="td-small">  15 Imagem final</td><td class="td-small"><input type="text" id="PREMIO" name="PREMIO" value="" SIZE=80><button class="botoes_randomicos" onclick="sorteia(18);" type="button">!</button></br></td><td class="td-small"> Os herois recebem parabens ou um premio</td></tr>
+<tr><td class="td-small">17 Caminho</td><td class="td-small"> 10 O caminho de volta </td><td class="td-small"><input type="text" id="CAMINHO" name="CAMINHO" value="" SIZE=80><button class="botoes_randomicos" onclick="sorteia(19);" type="button">!</button></br></td><td class="td-small">O Heroi volta para o inicio</td></tr>
+<tr><td class="td-small">18 Evolução</td><td class="td-small"> 11 A ressurreição </td><td class="td-small"><input type="text" id="RESSURREICAO" name="RESSURREICAO" value="" SIZE=80><button class="botoes_randomicos" onclick="sorteia(19);" type="button">!</button></br></td><td class="td-small">Ele percebe que evoluiu, sua missão foi cumprida</td></tr>
+<tr><td class="td-small">19 Elixir</td><td class="td-small"> 12 O retorno com o elixir </td><td class="td-small"><input type="text" id="RETORNO" name="RETORNO" value="" SIZE=80><button class="botoes_randomicos" onclick="sorteia(19);" type="button">!</button></br></td><td class="td-small">Ultima imagem, pode ter continuação?</td></tr>
+</table></br>
+
+
+
+<table border=1>
+<tr><td colspan=1>ARQUÉTIPOS (PROTAGONISTAS):</td><td><input type="checkbox" id="Smurfette_ck"> <label class="Smurfette">Smurfette Effect (just a female protagonist)</label> </td></tr>
+<tr><td>HEROI/PROTAGONISTA</td><td> <input type="text" id="HEROI" name="HEROI" value="">
+<select id="genero_heroi" ><option value="X" selected >x</option><option value="F">♀</option><option value="M">♂</option></select>
+
+RAÇA: <select id="raca">
+<option value="001" selected>Humano(a)</option>
+<option value="002">Animal</option>
+<option value="003">Humano Mutante</option>
+<option value="004">Humano Aprimorado</option>
+<option value="005">Humano Psíquico</option>
+<option value="010">Robô</option>
+<option value="011">Autômato</option>
+<option value="012">Android</option>
+<option value="013">Ciborgue</option>
+<option value="014">Inteligência Artificial</option>
+<option value="020">Fantasma</option>
+<option value="021">Espírito</option>
+<option value="022">Espectro</option>
+<option value="023">Poltergeist</option>
+<option value="024">Entidade Etérea</option>
+<option value="030">Anjo</option>
+<option value="031">Arcanjo</option>
+<option value="032">Querubim</option>
+<option value="033">Serafim</option>
+<option value="040">Demônio</option>
+<option value="041">Arquidemônio</option>
+<option value="042">Íncubo</option>
+<option value="043">Súcubo</option>
+<option value="044">Entidade Abissal</option>
+<option value="050">Elfo(a)</option>
+<option value="051">Elfo Negro (Drow)</option>
+<option value="052">Elfo da Floresta</option>
+<option value="053">Elfo Lunar</option>
+<option value="060">Anão(ã)</option>
+<option value="061">Anão da Montanha</option>
+<option value="062">Anão da Forja</option>
+<option value="070">Orc</option>
+<option value="071">Meio-Orc</option>
+<option value="072">Goblin</option>
+<option value="073">Troll</option>
+<option value="080">Gigante</option>
+<option value="081">Gigante de Pedra</option>
+<option value="082">Gigante de Gelo</option>
+<option value="083">Gigante de Fogo</option>
+<option value="090">Fada</option>
+<option value="091">Pixie</option>
+<option value="092">Sílfide</option>
+<option value="093">Dríade</option>
+<option value="100">Zumbi</option>
+<option value="101">Zumbi Infectado</option>
+<option value="102">Esqueleto</option>
+<option value="103">Espectro Morto-vivo</option>
+<option value="110">Vampiro(a)</option>
+<option value="111">Vampiro Ancião</option>
+<option value="112">Vampiro Nobre</option>
+<option value="120">Lich</option>
+<option value="121">Necromante Morto-vivo</option>
+<option value="130">Lobisomem</option>
+<option value="131">Metamorfo</option>
+<option value="132">Skinwalker</option>
+<option value="140">Sereia</option>
+<option value="141">Tritão</option>
+<option value="142">Kraken</option>
+<option value="150">Centauro</option>
+<option value="151">Minotauro</option>
+<option value="152">Quimera</option>
+<option value="153">Harpia</option>
+<option value="160">Dragão</option>
+<option value="161">Dragão Ancião</option>
+<option value="162">Dragão Elemental</option>
+<option value="163">Dragão Cósmico</option>
+<option value="170">Titã</option>
+<option value="171">Colosso</option>
+<option value="172">Entidade Primordial</option>
+<option value="180">Alienígena</option>
+<option value="181">Alienígena Humanoide</option>
+<option value="182">Alienígena Insetoide</option>
+<option value="183">Alienígena Energético</option>
+<option value="190">Entidade Dimensional</option>
+<option value="191">Entidade do Caos</option>
+<option value="192">Entidade do Vazio</option>
+<option value="193">Deus Menor</option>
+<option value="194">Deus Antigo</option>
+<option value="200">Outro</option>
+</select> 
+
+<label class="Class">Class</label>: <select id="classe">
+<option value="001" selected >Arqueiro(a)</option>
+<option value="002">Cavaleiro(a)</option>
+<option value="003">Garçon</option>
+<option value="004">Mago/Feiticeira</option>
+<option value="005">Monges</option>
+<option value="006">Campones(a)</option>
+<option value="007">Piratas</option>
+<option value="006">Necromante</option>
+<option value="007">Bruxo(a)</option>
+<option value="008">Hacker/Programador(a)</option>
+<option value="009">Peixe</option>
+<option value="010">Cozinheiro(a)</option>
+<option value="011">Paladino(a)</option>
+<option value="012">Motorista</option>
+<option value="013">Ladrão/Ladra</option>
+<option value="014">Bardo/Músico</option>
+<option value="015">Bárbaro(a)</option>
+<option value="016">Policial</option>
+<option value="017">Sereia/Tritão</option>
+</select> 
+
+RELAÇÂO COM O HEROI: 
+<select id="relacao">
+<option value="001" selected >Nenhuma</option>
+<option value="002">Tio/Tia</option>
+<option value="003">Pai/Mãe</option>
+<option value="004">Irmão/Irmã</option>
+<option value="005">Primo(a)</option>
+<option value="006">Amigo(a)</option>
+<option value="007">Recrutado(a) sob pagamento</option>
+<option value="008">Forçado(a)/Sequestro</option>
+<option value="009">Professor(a)/Mestre(a)</option>
+<option value="010">Tutor(a)</option>
+<option value="011">Padrastro/Madrastra</option>
+<option value="012">Neto(a)</option>
+<option value="013">Vizinho(a)</option>
+<option value="014">Sogro(a)</option>
+<option value="015">Esposo(a)</option>
+<option value="016">Namorado(a)</option>
+<option value="017">Noivo(a)</option>
+<option value="018">Cunhado(a)</option>
+<option value="019">Padrinho/Madrinha</option>
+<option value="020">Avô/Avó</option>
+</select>
+
+<button class="botoes_randomicos" onclick="sorteia(2);" type="button">!</button></td></tr>
+<tr><td>MENTOR                   </td><td> <input type="text" id="MENTOR" value="">  <select id="genero_mentor" >  <option value="X" selected >x</option><option value="F">♀</option><option value="M">♂</option></select>
+RAÇA: <select id="raca">
+<option value="001" selected>Humano(a)</option>
+<option value="002">Animal</option>
+<option value="003">Humano Mutante</option>
+<option value="004">Humano Aprimorado</option>
+<option value="005">Humano Psíquico</option>
+<option value="010">Robô</option>
+<option value="011">Autômato</option>
+<option value="012">Android</option>
+<option value="013">Ciborgue</option>
+<option value="014">Inteligência Artificial</option>
+<option value="020">Fantasma</option>
+<option value="021">Espírito</option>
+<option value="022">Espectro</option>
+<option value="023">Poltergeist</option>
+<option value="024">Entidade Etérea</option>
+<option value="030">Anjo</option>
+<option value="031">Arcanjo</option>
+<option value="032">Querubim</option>
+<option value="033">Serafim</option>
+<option value="040">Demônio</option>
+<option value="041">Arquidemônio</option>
+<option value="042">Íncubo</option>
+<option value="043">Súcubo</option>
+<option value="044">Entidade Abissal</option>
+<option value="050">Elfo(a)</option>
+<option value="051">Elfo Negro (Drow)</option>
+<option value="052">Elfo da Floresta</option>
+<option value="053">Elfo Lunar</option>
+<option value="060">Anão(ã)</option>
+<option value="061">Anão da Montanha</option>
+<option value="062">Anão da Forja</option>
+<option value="070">Orc</option>
+<option value="071">Meio-Orc</option>
+<option value="072">Goblin</option>
+<option value="073">Troll</option>
+<option value="080">Gigante</option>
+<option value="081">Gigante de Pedra</option>
+<option value="082">Gigante de Gelo</option>
+<option value="083">Gigante de Fogo</option>
+<option value="090">Fada</option>
+<option value="091">Pixie</option>
+<option value="092">Sílfide</option>
+<option value="093">Dríade</option>
+<option value="100">Zumbi</option>
+<option value="101">Zumbi Infectado</option>
+<option value="102">Esqueleto</option>
+<option value="103">Espectro Morto-vivo</option>
+<option value="110">Vampiro(a)</option>
+<option value="111">Vampiro Ancião</option>
+<option value="112">Vampiro Nobre</option>
+<option value="120">Lich</option>
+<option value="121">Necromante Morto-vivo</option>
+<option value="130">Lobisomem</option>
+<option value="131">Metamorfo</option>
+<option value="132">Skinwalker</option>
+<option value="140">Sereia</option>
+<option value="141">Tritão</option>
+<option value="142">Kraken</option>
+<option value="150">Centauro</option>
+<option value="151">Minotauro</option>
+<option value="152">Quimera</option>
+<option value="153">Harpia</option>
+<option value="160">Dragão</option>
+<option value="161">Dragão Ancião</option>
+<option value="162">Dragão Elemental</option>
+<option value="163">Dragão Cósmico</option>
+<option value="170">Titã</option>
+<option value="171">Colosso</option>
+<option value="172">Entidade Primordial</option>
+<option value="180">Alienígena</option>
+<option value="181">Alienígena Humanoide</option>
+<option value="182">Alienígena Insetoide</option>
+<option value="183">Alienígena Energético</option>
+<option value="190">Entidade Dimensional</option>
+<option value="191">Entidade do Caos</option>
+<option value="192">Entidade do Vazio</option>
+<option value="193">Deus Menor</option>
+<option value="194">Deus Antigo</option>
+<option value="200">Outro</option>
+</select> 
+
+<label class="Class">Class</label>: <select id="classe">
+<option value="001" selected >Arqueiro(a)</option>
+<option value="002">Cavaleiro(a)</option>
+<option value="003">Garçon</option>
+<option value="004">Mago/Feiticeira</option>
+<option value="005">Monges</option>
+<option value="006">Campones(a)</option>
+<option value="007">Piratas</option>
+<option value="006">Necromante</option>
+<option value="007">Bruxo(a)</option>
+<option value="008">Hacker/Programador(a)</option>
+<option value="009">Peixe</option>
+<option value="010">Cozinheiro(a)</option>
+<option value="011">Paladino(a)</option>
+<option value="012">Motorista</option>
+<option value="013">Ladrão/Ladra</option>
+<option value="014">Bardo/Músico</option>
+<option value="015">Bárbaro(a)</option>
+<option value="016">Policial</option>
+<option value="017">Sereia/Tritão</option>
+</select> 
+
+RELAÇÂO COM O HEROI: 
+<select id="relacao">
+<option value="001" selected >Nenhuma</option>
+<option value="002">Tio/Tia</option>
+<option value="003">Pai/Mãe</option>
+<option value="004">Irmão/Irmã</option>
+<option value="005">Primo(a)</option>
+<option value="006">Amigo(a)</option>
+<option value="007">Recrutado(a) sob pagamento</option>
+<option value="008">Forçado(a)/Sequestro</option>
+<option value="009">Professor(a)/Mestre(a)</option>
+<option value="010">Tutor(a)</option>
+<option value="011">Padrastro/Madrastra</option>
+<option value="012">Neto(a)</option>
+<option value="013">Vizinho(a)</option>
+<option value="014">Sogro(a)</option>
+<option value="015">Esposo(a)</option>
+<option value="016">Namorado(a)</option>
+<option value="017">Noivo(a)</option>
+<option value="018">Cunhado(a)</option>
+<option value="019">Padrinho/Madrinha</option>
+<option value="020">Avô/Avó</option>
+</select> <button class="botoes_randomicos" onclick="sorteia(3);" type="button">!</button></td></tr>
+<tr><td>ORELHA/PARCEIRO/ALIADO   </td><td><input type="text" id="PARCEIRO" value=""> <select id="genero_parceiro" ><option value="X" selected >x</option><option value="F">♀</option><option value="M">♂</option></select>
+RAÇA: <select id="raca">
+<option value="001" selected>Humano(a)</option>
+<option value="002">Animal</option>
+<option value="003">Humano Mutante</option>
+<option value="004">Humano Aprimorado</option>
+<option value="005">Humano Psíquico</option>
+<option value="010">Robô</option>
+<option value="011">Autômato</option>
+<option value="012">Android</option>
+<option value="013">Ciborgue</option>
+<option value="014">Inteligência Artificial</option>
+<option value="020">Fantasma</option>
+<option value="021">Espírito</option>
+<option value="022">Espectro</option>
+<option value="023">Poltergeist</option>
+<option value="024">Entidade Etérea</option>
+<option value="030">Anjo</option>
+<option value="031">Arcanjo</option>
+<option value="032">Querubim</option>
+<option value="033">Serafim</option>
+<option value="040">Demônio</option>
+<option value="041">Arquidemônio</option>
+<option value="042">Íncubo</option>
+<option value="043">Súcubo</option>
+<option value="044">Entidade Abissal</option>
+<option value="050">Elfo(a)</option>
+<option value="051">Elfo Negro (Drow)</option>
+<option value="052">Elfo da Floresta</option>
+<option value="053">Elfo Lunar</option>
+<option value="060">Anão(ã)</option>
+<option value="061">Anão da Montanha</option>
+<option value="062">Anão da Forja</option>
+<option value="070">Orc</option>
+<option value="071">Meio-Orc</option>
+<option value="072">Goblin</option>
+<option value="073">Troll</option>
+<option value="080">Gigante</option>
+<option value="081">Gigante de Pedra</option>
+<option value="082">Gigante de Gelo</option>
+<option value="083">Gigante de Fogo</option>
+<option value="090">Fada</option>
+<option value="091">Pixie</option>
+<option value="092">Sílfide</option>
+<option value="093">Dríade</option>
+<option value="100">Zumbi</option>
+<option value="101">Zumbi Infectado</option>
+<option value="102">Esqueleto</option>
+<option value="103">Espectro Morto-vivo</option>
+<option value="110">Vampiro(a)</option>
+<option value="111">Vampiro Ancião</option>
+<option value="112">Vampiro Nobre</option>
+<option value="120">Lich</option>
+<option value="121">Necromante Morto-vivo</option>
+<option value="130">Lobisomem</option>
+<option value="131">Metamorfo</option>
+<option value="132">Skinwalker</option>
+<option value="140">Sereia</option>
+<option value="141">Tritão</option>
+<option value="142">Kraken</option>
+<option value="150">Centauro</option>
+<option value="151">Minotauro</option>
+<option value="152">Quimera</option>
+<option value="153">Harpia</option>
+<option value="160">Dragão</option>
+<option value="161">Dragão Ancião</option>
+<option value="162">Dragão Elemental</option>
+<option value="163">Dragão Cósmico</option>
+<option value="170">Titã</option>
+<option value="171">Colosso</option>
+<option value="172">Entidade Primordial</option>
+<option value="180">Alienígena</option>
+<option value="181">Alienígena Humanoide</option>
+<option value="182">Alienígena Insetoide</option>
+<option value="183">Alienígena Energético</option>
+<option value="190">Entidade Dimensional</option>
+<option value="191">Entidade do Caos</option>
+<option value="192">Entidade do Vazio</option>
+<option value="193">Deus Menor</option>
+<option value="194">Deus Antigo</option>
+<option value="200">Outro</option>
+</select> 
+
+<label class="Class">Class</label>: <select id="classe">
+<option value="001" selected >Arqueiro(a)</option>
+<option value="002">Cavaleiro(a)</option>
+<option value="003">Garçon</option>
+<option value="004">Mago/Feiticeira</option>
+<option value="005">Monges</option>
+<option value="006">Campones(a)</option>
+<option value="007">Piratas</option>
+<option value="006">Necromante</option>
+<option value="007">Bruxo(a)</option>
+<option value="008">Hacker/Programador(a)</option>
+<option value="009">Peixe</option>
+<option value="010">Cozinheiro(a)</option>
+<option value="011">Paladino(a)</option>
+<option value="012">Motorista</option>
+<option value="013">Ladrão/Ladra</option>
+<option value="014">Bardo/Músico</option>
+<option value="015">Bárbaro(a)</option>
+<option value="016">Policial</option>
+<option value="017">Sereia/Tritão</option>
+</select> 
+
+RELAÇÂO COM O HEROI: 
+<select id="relacao">
+<option value="001" selected >Nenhuma</option>
+<option value="002">Tio/Tia</option>
+<option value="003">Pai/Mãe</option>
+<option value="004">Irmão/Irmã</option>
+<option value="005">Primo(a)</option>
+<option value="006">Amigo(a)</option>
+<option value="007">Recrutado(a) sob pagamento</option>
+<option value="008">Forçado(a)/Sequestro</option>
+<option value="009">Professor(a)/Mestre(a)</option>
+<option value="010">Tutor(a)</option>
+<option value="011">Padrastro/Madrastra</option>
+<option value="012">Neto(a)</option>
+<option value="013">Vizinho(a)</option>
+<option value="014">Sogro(a)</option>
+<option value="015">Esposo(a)</option>
+<option value="016">Namorado(a)</option>
+<option value="017">Noivo(a)</option>
+<option value="018">Cunhado(a)</option>
+<option value="019">Padrinho/Madrinha</option>
+<option value="020">Avô/Avó</option>
+</select> <button class="botoes_randomicos" onclick="sorteia(4);" type="button">!</button></td></tr>
+<tr><td>SOMBRA/VILAO/ANTAGONISTA </td><td><input type="text" id="VILAO" value="">    <select id="genero1" ><option value="X" selected >x</option><option value="F">♀</option><option value="M">♂</option></select>
+RAÇA: <select id="raca">
+<option value="001" selected>Humano(a)</option>
+<option value="002">Animal</option>
+<option value="003">Humano Mutante</option>
+<option value="004">Humano Aprimorado</option>
+<option value="005">Humano Psíquico</option>
+<option value="010">Robô</option>
+<option value="011">Autômato</option>
+<option value="012">Android</option>
+<option value="013">Ciborgue</option>
+<option value="014">Inteligência Artificial</option>
+<option value="020">Fantasma</option>
+<option value="021">Espírito</option>
+<option value="022">Espectro</option>
+<option value="023">Poltergeist</option>
+<option value="024">Entidade Etérea</option>
+<option value="030">Anjo</option>
+<option value="031">Arcanjo</option>
+<option value="032">Querubim</option>
+<option value="033">Serafim</option>
+<option value="040">Demônio</option>
+<option value="041">Arquidemônio</option>
+<option value="042">Íncubo</option>
+<option value="043">Súcubo</option>
+<option value="044">Entidade Abissal</option>
+<option value="050">Elfo(a)</option>
+<option value="051">Elfo Negro (Drow)</option>
+<option value="052">Elfo da Floresta</option>
+<option value="053">Elfo Lunar</option>
+<option value="060">Anão(ã)</option>
+<option value="061">Anão da Montanha</option>
+<option value="062">Anão da Forja</option>
+<option value="070">Orc</option>
+<option value="071">Meio-Orc</option>
+<option value="072">Goblin</option>
+<option value="073">Troll</option>
+<option value="080">Gigante</option>
+<option value="081">Gigante de Pedra</option>
+<option value="082">Gigante de Gelo</option>
+<option value="083">Gigante de Fogo</option>
+<option value="090">Fada</option>
+<option value="091">Pixie</option>
+<option value="092">Sílfide</option>
+<option value="093">Dríade</option>
+<option value="100">Zumbi</option>
+<option value="101">Zumbi Infectado</option>
+<option value="102">Esqueleto</option>
+<option value="103">Espectro Morto-vivo</option>
+<option value="110">Vampiro(a)</option>
+<option value="111">Vampiro Ancião</option>
+<option value="112">Vampiro Nobre</option>
+<option value="120">Lich</option>
+<option value="121">Necromante Morto-vivo</option>
+<option value="130">Lobisomem</option>
+<option value="131">Metamorfo</option>
+<option value="132">Skinwalker</option>
+<option value="140">Sereia</option>
+<option value="141">Tritão</option>
+<option value="142">Kraken</option>
+<option value="150">Centauro</option>
+<option value="151">Minotauro</option>
+<option value="152">Quimera</option>
+<option value="153">Harpia</option>
+<option value="160">Dragão</option>
+<option value="161">Dragão Ancião</option>
+<option value="162">Dragão Elemental</option>
+<option value="163">Dragão Cósmico</option>
+<option value="170">Titã</option>
+<option value="171">Colosso</option>
+<option value="172">Entidade Primordial</option>
+<option value="180">Alienígena</option>
+<option value="181">Alienígena Humanoide</option>
+<option value="182">Alienígena Insetoide</option>
+<option value="183">Alienígena Energético</option>
+<option value="190">Entidade Dimensional</option>
+<option value="191">Entidade do Caos</option>
+<option value="192">Entidade do Vazio</option>
+<option value="193">Deus Menor</option>
+<option value="194">Deus Antigo</option>
+<option value="200">Outro</option>
+</select> 
+
+<label class="Class">Class</label>: <select id="classe">
+<option value="001" selected >Arqueiro(a)</option>
+<option value="002">Cavaleiro(a)</option>
+<option value="003">Garçon</option>
+<option value="004">Mago/Feiticeira</option>
+<option value="005">Monges</option>
+<option value="006">Campones(a)</option>
+<option value="007">Piratas</option>
+<option value="006">Necromante</option>
+<option value="007">Bruxo(a)</option>
+<option value="008">Hacker/Programador(a)</option>
+<option value="009">Peixe</option>
+<option value="010">Cozinheiro(a)</option>
+<option value="011">Paladino(a)</option>
+<option value="012">Motorista</option>
+<option value="013">Ladrão/Ladra</option>
+<option value="014">Bardo/Músico</option>
+<option value="015">Bárbaro(a)</option>
+<option value="016">Policial</option>
+<option value="017">Sereia/Tritão</option>
+</select> 
+
+RELAÇÂO COM O HEROI: 
+<select id="relacao">
+<option value="001" selected >Nenhuma</option>
+<option value="002">Tio/Tia</option>
+<option value="003">Pai/Mãe</option>
+<option value="004">Irmão/Irmã</option>
+<option value="005">Primo(a)</option>
+<option value="006">Amigo(a)</option>
+<option value="007">Recrutado(a) sob pagamento</option>
+<option value="008">Forçado(a)/Sequestro</option>
+<option value="009">Professor(a)/Mestre(a)</option>
+<option value="010">Tutor(a)</option>
+<option value="011">Padrastro/Madrastra</option>
+<option value="012">Neto(a)</option>
+<option value="013">Vizinho(a)</option>
+<option value="014">Sogro(a)</option>
+<option value="015">Esposo(a)</option>
+<option value="016">Namorado(a)</option>
+<option value="017">Noivo(a)</option>
+<option value="018">Cunhado(a)</option>
+<option value="019">Padrinho/Madrinha</option>
+<option value="020">Avô/Avó</option>
+</select><button class="botoes_randomicos" onclick="sorteia(5);" type="button">!</button></td></tr>
+<tr><td>ORELHA/AUXVILÃO          </td><td><input type="text" id="AUXVILAO" value=""> <select id="genero1" ><option value="X" selected >x</option><option value="F">♀</option><option value="M">♂</option></select>
+RAÇA: <select id="raca">
+<option value="001" selected>Humano(a)</option>
+<option value="002">Animal</option>
+<option value="003">Humano Mutante</option>
+<option value="004">Humano Aprimorado</option>
+<option value="005">Humano Psíquico</option>
+<option value="010">Robô</option>
+<option value="011">Autômato</option>
+<option value="012">Android</option>
+<option value="013">Ciborgue</option>
+<option value="014">Inteligência Artificial</option>
+<option value="020">Fantasma</option>
+<option value="021">Espírito</option>
+<option value="022">Espectro</option>
+<option value="023">Poltergeist</option>
+<option value="024">Entidade Etérea</option>
+<option value="030">Anjo</option>
+<option value="031">Arcanjo</option>
+<option value="032">Querubim</option>
+<option value="033">Serafim</option>
+<option value="040">Demônio</option>
+<option value="041">Arquidemônio</option>
+<option value="042">Íncubo</option>
+<option value="043">Súcubo</option>
+<option value="044">Entidade Abissal</option>
+<option value="050">Elfo(a)</option>
+<option value="051">Elfo Negro (Drow)</option>
+<option value="052">Elfo da Floresta</option>
+<option value="053">Elfo Lunar</option>
+<option value="060">Anão(ã)</option>
+<option value="061">Anão da Montanha</option>
+<option value="062">Anão da Forja</option>
+<option value="070">Orc</option>
+<option value="071">Meio-Orc</option>
+<option value="072">Goblin</option>
+<option value="073">Troll</option>
+<option value="080">Gigante</option>
+<option value="081">Gigante de Pedra</option>
+<option value="082">Gigante de Gelo</option>
+<option value="083">Gigante de Fogo</option>
+<option value="090">Fada</option>
+<option value="091">Pixie</option>
+<option value="092">Sílfide</option>
+<option value="093">Dríade</option>
+<option value="100">Zumbi</option>
+<option value="101">Zumbi Infectado</option>
+<option value="102">Esqueleto</option>
+<option value="103">Espectro Morto-vivo</option>
+<option value="110">Vampiro(a)</option>
+<option value="111">Vampiro Ancião</option>
+<option value="112">Vampiro Nobre</option>
+<option value="120">Lich</option>
+<option value="121">Necromante Morto-vivo</option>
+<option value="130">Lobisomem</option>
+<option value="131">Metamorfo</option>
+<option value="132">Skinwalker</option>
+<option value="140">Sereia</option>
+<option value="141">Tritão</option>
+<option value="142">Kraken</option>
+<option value="150">Centauro</option>
+<option value="151">Minotauro</option>
+<option value="152">Quimera</option>
+<option value="153">Harpia</option>
+<option value="160">Dragão</option>
+<option value="161">Dragão Ancião</option>
+<option value="162">Dragão Elemental</option>
+<option value="163">Dragão Cósmico</option>
+<option value="170">Titã</option>
+<option value="171">Colosso</option>
+<option value="172">Entidade Primordial</option>
+<option value="180">Alienígena</option>
+<option value="181">Alienígena Humanoide</option>
+<option value="182">Alienígena Insetoide</option>
+<option value="183">Alienígena Energético</option>
+<option value="190">Entidade Dimensional</option>
+<option value="191">Entidade do Caos</option>
+<option value="192">Entidade do Vazio</option>
+<option value="193">Deus Menor</option>
+<option value="194">Deus Antigo</option>
+<option value="200">Outro</option>
+</select> 
+
+<label class="Class">Class</label>: <select id="classe">
+<option value="001" selected >Arqueiro(a)</option>
+<option value="002">Cavaleiro(a)</option>
+<option value="003">Garçon</option>
+<option value="004">Mago/Feiticeira</option>
+<option value="005">Monges</option>
+<option value="006">Campones(a)</option>
+<option value="007">Piratas</option>
+<option value="006">Necromante</option>
+<option value="007">Bruxo(a)</option>
+<option value="008">Hacker/Programador(a)</option>
+<option value="009">Peixe</option>
+<option value="010">Cozinheiro(a)</option>
+<option value="011">Paladino(a)</option>
+<option value="012">Motorista</option>
+<option value="013">Ladrão/Ladra</option>
+<option value="014">Bardo/Músico</option>
+<option value="015">Bárbaro(a)</option>
+<option value="016">Policial</option>
+<option value="017">Sereia/Tritão</option>
+</select> 
+
+RELAÇÂO COM O HEROI: 
+<select id="relacao">
+<option value="001" selected >Nenhuma</option>
+<option value="002">Tio/Tia</option>
+<option value="003">Pai/Mãe</option>
+<option value="004">Irmão/Irmã</option>
+<option value="005">Primo(a)</option>
+<option value="006">Amigo(a)</option>
+<option value="007">Recrutado(a) sob pagamento</option>
+<option value="008">Forçado(a)/Sequestro</option>
+<option value="009">Professor(a)/Mestre(a)</option>
+<option value="010">Tutor(a)</option>
+<option value="011">Padrastro/Madrastra</option>
+<option value="012">Neto(a)</option>
+<option value="013">Vizinho(a)</option>
+<option value="014">Sogro(a)</option>
+<option value="015">Esposo(a)</option>
+<option value="016">Namorado(a)</option>
+<option value="017">Noivo(a)</option>
+<option value="018">Cunhado(a)</option>
+<option value="019">Padrinho/Madrinha</option>
+<option value="020">Avô/Avó</option>
+</select><button class="botoes_randomicos" onclick="sorteia(6);" type="button">!</button></td></tr>
+<tr><td>INDECISO                 </td><td><input type="text" id="INDECISO" value=""> <select id="genero1" ><option value="X" selected >x</option><option value="F">♀</option><option value="M">♂</option></select>
+RAÇA: <select id="raca">
+<option value="001" selected>Humano(a)</option>
+<option value="002">Animal</option>
+<option value="003">Humano Mutante</option>
+<option value="004">Humano Aprimorado</option>
+<option value="005">Humano Psíquico</option>
+<option value="010">Robô</option>
+<option value="011">Autômato</option>
+<option value="012">Android</option>
+<option value="013">Ciborgue</option>
+<option value="014">Inteligência Artificial</option>
+<option value="020">Fantasma</option>
+<option value="021">Espírito</option>
+<option value="022">Espectro</option>
+<option value="023">Poltergeist</option>
+<option value="024">Entidade Etérea</option>
+<option value="030">Anjo</option>
+<option value="031">Arcanjo</option>
+<option value="032">Querubim</option>
+<option value="033">Serafim</option>
+<option value="040">Demônio</option>
+<option value="041">Arquidemônio</option>
+<option value="042">Íncubo</option>
+<option value="043">Súcubo</option>
+<option value="044">Entidade Abissal</option>
+<option value="050">Elfo(a)</option>
+<option value="051">Elfo Negro (Drow)</option>
+<option value="052">Elfo da Floresta</option>
+<option value="053">Elfo Lunar</option>
+<option value="060">Anão(ã)</option>
+<option value="061">Anão da Montanha</option>
+<option value="062">Anão da Forja</option>
+<option value="070">Orc</option>
+<option value="071">Meio-Orc</option>
+<option value="072">Goblin</option>
+<option value="073">Troll</option>
+<option value="080">Gigante</option>
+<option value="081">Gigante de Pedra</option>
+<option value="082">Gigante de Gelo</option>
+<option value="083">Gigante de Fogo</option>
+<option value="090">Fada</option>
+<option value="091">Pixie</option>
+<option value="092">Sílfide</option>
+<option value="093">Dríade</option>
+<option value="100">Zumbi</option>
+<option value="101">Zumbi Infectado</option>
+<option value="102">Esqueleto</option>
+<option value="103">Espectro Morto-vivo</option>
+<option value="110">Vampiro(a)</option>
+<option value="111">Vampiro Ancião</option>
+<option value="112">Vampiro Nobre</option>
+<option value="120">Lich</option>
+<option value="121">Necromante Morto-vivo</option>
+<option value="130">Lobisomem</option>
+<option value="131">Metamorfo</option>
+<option value="132">Skinwalker</option>
+<option value="140">Sereia</option>
+<option value="141">Tritão</option>
+<option value="142">Kraken</option>
+<option value="150">Centauro</option>
+<option value="151">Minotauro</option>
+<option value="152">Quimera</option>
+<option value="153">Harpia</option>
+<option value="160">Dragão</option>
+<option value="161">Dragão Ancião</option>
+<option value="162">Dragão Elemental</option>
+<option value="163">Dragão Cósmico</option>
+<option value="170">Titã</option>
+<option value="171">Colosso</option>
+<option value="172">Entidade Primordial</option>
+<option value="180">Alienígena</option>
+<option value="181">Alienígena Humanoide</option>
+<option value="182">Alienígena Insetoide</option>
+<option value="183">Alienígena Energético</option>
+<option value="190">Entidade Dimensional</option>
+<option value="191">Entidade do Caos</option>
+<option value="192">Entidade do Vazio</option>
+<option value="193">Deus Menor</option>
+<option value="194">Deus Antigo</option>
+<option value="200">Outro</option>
+</select> 
+
+<label class="Class">Class</label>: <select id="classe">
+<option value="001" selected >Arqueiro(a)</option>
+<option value="002">Cavaleiro(a)</option>
+<option value="003">Garçon</option>
+<option value="004">Mago/Feiticeira</option>
+<option value="005">Monges</option>
+<option value="006">Campones(a)</option>
+<option value="007">Piratas</option>
+<option value="006">Necromante</option>
+<option value="007">Bruxo(a)</option>
+<option value="008">Hacker/Programador(a)</option>
+<option value="009">Peixe</option>
+<option value="010">Cozinheiro(a)</option>
+<option value="011">Paladino(a)</option>
+<option value="012">Motorista</option>
+<option value="013">Ladrão/Ladra</option>
+<option value="014">Bardo/Músico</option>
+<option value="015">Bárbaro(a)</option>
+<option value="016">Policial</option>
+<option value="017">Sereia/Tritão</option>
+</select> 
+
+RELAÇÂO COM O HEROI: 
+<select id="relacao">
+<option value="001" selected >Nenhuma</option>
+<option value="002">Tio/Tia</option>
+<option value="003">Pai/Mãe</option>
+<option value="004">Irmão/Irmã</option>
+<option value="005">Primo(a)</option>
+<option value="006">Amigo(a)</option>
+<option value="007">Recrutado(a) sob pagamento</option>
+<option value="008">Forçado(a)/Sequestro</option>
+<option value="009">Professor(a)/Mestre(a)</option>
+<option value="010">Tutor(a)</option>
+<option value="011">Padrastro/Madrastra</option>
+<option value="012">Neto(a)</option>
+<option value="013">Vizinho(a)</option>
+<option value="014">Sogro(a)</option>
+<option value="015">Esposo(a)</option>
+<option value="016">Namorado(a)</option>
+<option value="017">Noivo(a)</option>
+<option value="018">Cunhado(a)</option>
+<option value="019">Padrinho/Madrinha</option>
+<option value="020">Avô/Avó</option>
+</select><button class="botoes_randomicos" onclick="sorteia(7);" type="button">!</button></td></tr>
+<tr><td>PÍCARO/CÔMICO            </td><td><input type="text" id="COMICO" value="">   <select id="genero1" ><option value="X" selected >x</option><option value="F">♀</option><option value="M">♂</option></select>
+RAÇA: <select id="raca">
+<option value="001" selected>Humano(a)</option>
+<option value="002">Animal</option>
+<option value="003">Humano Mutante</option>
+<option value="004">Humano Aprimorado</option>
+<option value="005">Humano Psíquico</option>
+<option value="010">Robô</option>
+<option value="011">Autômato</option>
+<option value="012">Android</option>
+<option value="013">Ciborgue</option>
+<option value="014">Inteligência Artificial</option>
+<option value="020">Fantasma</option>
+<option value="021">Espírito</option>
+<option value="022">Espectro</option>
+<option value="023">Poltergeist</option>
+<option value="024">Entidade Etérea</option>
+<option value="030">Anjo</option>
+<option value="031">Arcanjo</option>
+<option value="032">Querubim</option>
+<option value="033">Serafim</option>
+<option value="040">Demônio</option>
+<option value="041">Arquidemônio</option>
+<option value="042">Íncubo</option>
+<option value="043">Súcubo</option>
+<option value="044">Entidade Abissal</option>
+<option value="050">Elfo(a)</option>
+<option value="051">Elfo Negro (Drow)</option>
+<option value="052">Elfo da Floresta</option>
+<option value="053">Elfo Lunar</option>
+<option value="060">Anão(ã)</option>
+<option value="061">Anão da Montanha</option>
+<option value="062">Anão da Forja</option>
+<option value="070">Orc</option>
+<option value="071">Meio-Orc</option>
+<option value="072">Goblin</option>
+<option value="073">Troll</option>
+<option value="080">Gigante</option>
+<option value="081">Gigante de Pedra</option>
+<option value="082">Gigante de Gelo</option>
+<option value="083">Gigante de Fogo</option>
+<option value="090">Fada</option>
+<option value="091">Pixie</option>
+<option value="092">Sílfide</option>
+<option value="093">Dríade</option>
+<option value="100">Zumbi</option>
+<option value="101">Zumbi Infectado</option>
+<option value="102">Esqueleto</option>
+<option value="103">Espectro Morto-vivo</option>
+<option value="110">Vampiro(a)</option>
+<option value="111">Vampiro Ancião</option>
+<option value="112">Vampiro Nobre</option>
+<option value="120">Lich</option>
+<option value="121">Necromante Morto-vivo</option>
+<option value="130">Lobisomem</option>
+<option value="131">Metamorfo</option>
+<option value="132">Skinwalker</option>
+<option value="140">Sereia</option>
+<option value="141">Tritão</option>
+<option value="142">Kraken</option>
+<option value="150">Centauro</option>
+<option value="151">Minotauro</option>
+<option value="152">Quimera</option>
+<option value="153">Harpia</option>
+<option value="160">Dragão</option>
+<option value="161">Dragão Ancião</option>
+<option value="162">Dragão Elemental</option>
+<option value="163">Dragão Cósmico</option>
+<option value="170">Titã</option>
+<option value="171">Colosso</option>
+<option value="172">Entidade Primordial</option>
+<option value="180">Alienígena</option>
+<option value="181">Alienígena Humanoide</option>
+<option value="182">Alienígena Insetoide</option>
+<option value="183">Alienígena Energético</option>
+<option value="190">Entidade Dimensional</option>
+<option value="191">Entidade do Caos</option>
+<option value="192">Entidade do Vazio</option>
+<option value="193">Deus Menor</option>
+<option value="194">Deus Antigo</option>
+<option value="200">Outro</option>
+</select> 
+
+<label class="Class">Class</label>: <select id="classe">
+<option value="001" selected >Arqueiro(a)</option>
+<option value="002">Cavaleiro(a)</option>
+<option value="003">Garçon</option>
+<option value="004">Mago/Feiticeira</option>
+<option value="005">Monges</option>
+<option value="006">Campones(a)</option>
+<option value="007">Piratas</option>
+<option value="006">Necromante</option>
+<option value="007">Bruxo(a)</option>
+<option value="008">Hacker/Programador(a)</option>
+<option value="009">Peixe</option>
+<option value="010">Cozinheiro(a)</option>
+<option value="011">Paladino(a)</option>
+<option value="012">Motorista</option>
+<option value="013">Ladrão/Ladra</option>
+<option value="014">Bardo/Músico</option>
+<option value="015">Bárbaro(a)</option>
+<option value="016">Policial</option>
+<option value="017">Sereia/Tritão</option>
+</select> 
+
+RELAÇÂO COM O HEROI: 
+<select id="relacao">
+<option value="001" selected >Nenhuma</option>
+<option value="002">Tio/Tia</option>
+<option value="003">Pai/Mãe</option>
+<option value="004">Irmão/Irmã</option>
+<option value="005">Primo(a)</option>
+<option value="006">Amigo(a)</option>
+<option value="007">Recrutado(a) sob pagamento</option>
+<option value="008">Forçado(a)/Sequestro</option>
+<option value="009">Professor(a)/Mestre(a)</option>
+<option value="010">Tutor(a)</option>
+<option value="011">Padrastro/Madrastra</option>
+<option value="012">Neto(a)</option>
+<option value="013">Vizinho(a)</option>
+<option value="014">Sogro(a)</option>
+<option value="015">Esposo(a)</option>
+<option value="016">Namorado(a)</option>
+<option value="017">Noivo(a)</option>
+<option value="018">Cunhado(a)</option>
+<option value="019">Padrinho/Madrinha</option>
+<option value="020">Avô/Avó</option>
+</select><button class="botoes_randomicos" onclick="sorteia(8);" type="button">!</button></td></tr>
+<tr><td>DONZELA                  </td><td><input type="text" id="DONZELA" value="">  <select id="genero1" ><option value="X" selected >x</option><option value="F">♀</option><option value="M">♂</option></select>
+RAÇA: <select id="raca">
+<option value="001" selected>Humano(a)</option>
+<option value="002">Animal</option>
+<option value="003">Humano Mutante</option>
+<option value="004">Humano Aprimorado</option>
+<option value="005">Humano Psíquico</option>
+<option value="010">Robô</option>
+<option value="011">Autômato</option>
+<option value="012">Android</option>
+<option value="013">Ciborgue</option>
+<option value="014">Inteligência Artificial</option>
+<option value="020">Fantasma</option>
+<option value="021">Espírito</option>
+<option value="022">Espectro</option>
+<option value="023">Poltergeist</option>
+<option value="024">Entidade Etérea</option>
+<option value="030">Anjo</option>
+<option value="031">Arcanjo</option>
+<option value="032">Querubim</option>
+<option value="033">Serafim</option>
+<option value="040">Demônio</option>
+<option value="041">Arquidemônio</option>
+<option value="042">Íncubo</option>
+<option value="043">Súcubo</option>
+<option value="044">Entidade Abissal</option>
+<option value="050">Elfo(a)</option>
+<option value="051">Elfo Negro (Drow)</option>
+<option value="052">Elfo da Floresta</option>
+<option value="053">Elfo Lunar</option>
+<option value="060">Anão(ã)</option>
+<option value="061">Anão da Montanha</option>
+<option value="062">Anão da Forja</option>
+<option value="070">Orc</option>
+<option value="071">Meio-Orc</option>
+<option value="072">Goblin</option>
+<option value="073">Troll</option>
+<option value="080">Gigante</option>
+<option value="081">Gigante de Pedra</option>
+<option value="082">Gigante de Gelo</option>
+<option value="083">Gigante de Fogo</option>
+<option value="090">Fada</option>
+<option value="091">Pixie</option>
+<option value="092">Sílfide</option>
+<option value="093">Dríade</option>
+<option value="100">Zumbi</option>
+<option value="101">Zumbi Infectado</option>
+<option value="102">Esqueleto</option>
+<option value="103">Espectro Morto-vivo</option>
+<option value="110">Vampiro(a)</option>
+<option value="111">Vampiro Ancião</option>
+<option value="112">Vampiro Nobre</option>
+<option value="120">Lich</option>
+<option value="121">Necromante Morto-vivo</option>
+<option value="130">Lobisomem</option>
+<option value="131">Metamorfo</option>
+<option value="132">Skinwalker</option>
+<option value="140">Sereia</option>
+<option value="141">Tritão</option>
+<option value="142">Kraken</option>
+<option value="150">Centauro</option>
+<option value="151">Minotauro</option>
+<option value="152">Quimera</option>
+<option value="153">Harpia</option>
+<option value="160">Dragão</option>
+<option value="161">Dragão Ancião</option>
+<option value="162">Dragão Elemental</option>
+<option value="163">Dragão Cósmico</option>
+<option value="170">Titã</option>
+<option value="171">Colosso</option>
+<option value="172">Entidade Primordial</option>
+<option value="180">Alienígena</option>
+<option value="181">Alienígena Humanoide</option>
+<option value="182">Alienígena Insetoide</option>
+<option value="183">Alienígena Energético</option>
+<option value="190">Entidade Dimensional</option>
+<option value="191">Entidade do Caos</option>
+<option value="192">Entidade do Vazio</option>
+<option value="193">Deus Menor</option>
+<option value="194">Deus Antigo</option>
+<option value="200">Outro</option>
+</select> 
+
+<label class="Class">Class</label>: <select id="classe">
+<option value="001" selected >Arqueiro(a)</option>
+<option value="002">Cavaleiro(a)</option>
+<option value="003">Garçon</option>
+<option value="004">Mago/Feiticeira</option>
+<option value="005">Monges</option>
+<option value="006">Campones(a)</option>
+<option value="007">Piratas</option>
+<option value="006">Necromante</option>
+<option value="007">Bruxo(a)</option>
+<option value="008">Hacker/Programador(a)</option>
+<option value="009">Peixe</option>
+<option value="010">Cozinheiro(a)</option>
+<option value="011">Paladino(a)</option>
+<option value="012">Motorista</option>
+<option value="013">Ladrão/Ladra</option>
+<option value="014">Bardo/Músico</option>
+<option value="015">Bárbaro(a)</option>
+<option value="016">Policial</option>
+<option value="017">Sereia/Tritão</option>
+</select> 
+
+RELAÇÂO COM O HEROI: 
+<select id="relacao">
+<option value="001" selected >Nenhuma</option>
+<option value="002">Tio/Tia</option>
+<option value="003">Pai/Mãe</option>
+<option value="004">Irmão/Irmã</option>
+<option value="005">Primo(a)</option>
+<option value="006">Amigo(a)</option>
+<option value="007">Recrutado(a) sob pagamento</option>
+<option value="008">Forçado(a)/Sequestro</option>
+<option value="009">Professor(a)/Mestre(a)</option>
+<option value="010">Tutor(a)</option>
+<option value="011">Padrastro/Madrastra</option>
+<option value="012">Neto(a)</option>
+<option value="013">Vizinho(a)</option>
+<option value="014">Sogro(a)</option>
+<option value="015">Esposo(a)</option>
+<option value="016">Namorado(a)</option>
+<option value="017">Noivo(a)</option>
+<option value="018">Cunhado(a)</option>
+<option value="019">Padrinho/Madrinha</option>
+<option value="020">Avô/Avó</option>
+</select><button class="botoes_randomicos" onclick="sorteia(8);" type="button">!</button></td></tr>
+</table>
+
+
+  
+
+</br>
+<table border=1>
+<tr><td colspan=2>ARQUÉTIPOS (COAJUVANTES):</td></tr>
+<tr><td>COAJUVANTE 1</td><td> <input type="text" id="COAJUVANTES1" name="COAJUVANTES1" value=""><select id="genero1" ><option value="X" selected >x</option><option value="F">♀</option><option value="M">♂</option></select>
+RAÇA: <select id="raca">
+<option value="001" selected>Humano(a)</option>
+<option value="002">Animal</option>
+<option value="003">Humano Mutante</option>
+<option value="004">Humano Aprimorado</option>
+<option value="005">Humano Psíquico</option>
+<option value="010">Robô</option>
+<option value="011">Autômato</option>
+<option value="012">Android</option>
+<option value="013">Ciborgue</option>
+<option value="014">Inteligência Artificial</option>
+<option value="020">Fantasma</option>
+<option value="021">Espírito</option>
+<option value="022">Espectro</option>
+<option value="023">Poltergeist</option>
+<option value="024">Entidade Etérea</option>
+<option value="030">Anjo</option>
+<option value="031">Arcanjo</option>
+<option value="032">Querubim</option>
+<option value="033">Serafim</option>
+<option value="040">Demônio</option>
+<option value="041">Arquidemônio</option>
+<option value="042">Íncubo</option>
+<option value="043">Súcubo</option>
+<option value="044">Entidade Abissal</option>
+<option value="050">Elfo(a)</option>
+<option value="051">Elfo Negro (Drow)</option>
+<option value="052">Elfo da Floresta</option>
+<option value="053">Elfo Lunar</option>
+<option value="060">Anão(ã)</option>
+<option value="061">Anão da Montanha</option>
+<option value="062">Anão da Forja</option>
+<option value="070">Orc</option>
+<option value="071">Meio-Orc</option>
+<option value="072">Goblin</option>
+<option value="073">Troll</option>
+<option value="080">Gigante</option>
+<option value="081">Gigante de Pedra</option>
+<option value="082">Gigante de Gelo</option>
+<option value="083">Gigante de Fogo</option>
+<option value="090">Fada</option>
+<option value="091">Pixie</option>
+<option value="092">Sílfide</option>
+<option value="093">Dríade</option>
+<option value="100">Zumbi</option>
+<option value="101">Zumbi Infectado</option>
+<option value="102">Esqueleto</option>
+<option value="103">Espectro Morto-vivo</option>
+<option value="110">Vampiro(a)</option>
+<option value="111">Vampiro Ancião</option>
+<option value="112">Vampiro Nobre</option>
+<option value="120">Lich</option>
+<option value="121">Necromante Morto-vivo</option>
+<option value="130">Lobisomem</option>
+<option value="131">Metamorfo</option>
+<option value="132">Skinwalker</option>
+<option value="140">Sereia</option>
+<option value="141">Tritão</option>
+<option value="142">Kraken</option>
+<option value="150">Centauro</option>
+<option value="151">Minotauro</option>
+<option value="152">Quimera</option>
+<option value="153">Harpia</option>
+<option value="160">Dragão</option>
+<option value="161">Dragão Ancião</option>
+<option value="162">Dragão Elemental</option>
+<option value="163">Dragão Cósmico</option>
+<option value="170">Titã</option>
+<option value="171">Colosso</option>
+<option value="172">Entidade Primordial</option>
+<option value="180">Alienígena</option>
+<option value="181">Alienígena Humanoide</option>
+<option value="182">Alienígena Insetoide</option>
+<option value="183">Alienígena Energético</option>
+<option value="190">Entidade Dimensional</option>
+<option value="191">Entidade do Caos</option>
+<option value="192">Entidade do Vazio</option>
+<option value="193">Deus Menor</option>
+<option value="194">Deus Antigo</option>
+<option value="200">Outro</option>
+</select> 
+
+<label class="Class">Class</label>: <select id="classe">
+<option value="001" selected >Arqueiro(a)</option>
+<option value="002">Cavaleiro(a)</option>
+<option value="003">Garçon</option>
+<option value="004">Mago/Feiticeira</option>
+<option value="005">Monges</option>
+<option value="006">Campones(a)</option>
+<option value="007">Piratas</option>
+<option value="006">Necromante</option>
+<option value="007">Bruxo(a)</option>
+<option value="008">Hacker/Programador(a)</option>
+<option value="009">Peixe</option>
+<option value="010">Cozinheiro(a)</option>
+<option value="011">Paladino(a)</option>
+<option value="012">Motorista</option>
+<option value="013">Ladrão/Ladra</option>
+<option value="014">Bardo/Músico</option>
+<option value="015">Bárbaro(a)</option>
+<option value="016">Policial</option>
+<option value="017">Sereia/Tritão</option>
+</select> 
+
+RELAÇÂO COM O HEROI: 
+<select id="relacao">
+<option value="001" selected >Nenhuma</option>
+<option value="002">Tio/Tia</option>
+<option value="003">Pai/Mãe</option>
+<option value="004">Irmão/Irmã</option>
+<option value="005">Primo(a)</option>
+<option value="006">Amigo(a)</option>
+<option value="007">Recrutado(a) sob pagamento</option>
+<option value="008">Forçado(a)/Sequestro</option>
+<option value="009">Professor(a)/Mestre(a)</option>
+<option value="010">Tutor(a)</option>
+<option value="011">Padrastro/Madrastra</option>
+<option value="012">Neto(a)</option>
+<option value="013">Vizinho(a)</option>
+<option value="014">Sogro(a)</option>
+<option value="015">Esposo(a)</option>
+<option value="016">Namorado(a)</option>
+<option value="017">Noivo(a)</option>
+<option value="018">Cunhado(a)</option>
+<option value="019">Padrinho/Madrinha</option>
+<option value="020">Avô/Avó</option>
+</select>
+<button class="botoes_randomicos" onclick="sorteia(9);" type="button">!</button></td></tr>
+<tr><td>COAJUVANTE 2</td><td> <input type="text" id="COAJUVANTES2" name="COAJUVANTES2" value=""><select id="genero1" ><option value="X" selected >x</option><option value="F">♀</option><option value="M">♂</option></select>
+RAÇA: <select id="raca">
+<option value="001" selected>Humano(a)</option>
+<option value="002">Animal</option>
+<option value="003">Humano Mutante</option>
+<option value="004">Humano Aprimorado</option>
+<option value="005">Humano Psíquico</option>
+<option value="010">Robô</option>
+<option value="011">Autômato</option>
+<option value="012">Android</option>
+<option value="013">Ciborgue</option>
+<option value="014">Inteligência Artificial</option>
+<option value="020">Fantasma</option>
+<option value="021">Espírito</option>
+<option value="022">Espectro</option>
+<option value="023">Poltergeist</option>
+<option value="024">Entidade Etérea</option>
+<option value="030">Anjo</option>
+<option value="031">Arcanjo</option>
+<option value="032">Querubim</option>
+<option value="033">Serafim</option>
+<option value="040">Demônio</option>
+<option value="041">Arquidemônio</option>
+<option value="042">Íncubo</option>
+<option value="043">Súcubo</option>
+<option value="044">Entidade Abissal</option>
+<option value="050">Elfo(a)</option>
+<option value="051">Elfo Negro (Drow)</option>
+<option value="052">Elfo da Floresta</option>
+<option value="053">Elfo Lunar</option>
+<option value="060">Anão(ã)</option>
+<option value="061">Anão da Montanha</option>
+<option value="062">Anão da Forja</option>
+<option value="070">Orc</option>
+<option value="071">Meio-Orc</option>
+<option value="072">Goblin</option>
+<option value="073">Troll</option>
+<option value="080">Gigante</option>
+<option value="081">Gigante de Pedra</option>
+<option value="082">Gigante de Gelo</option>
+<option value="083">Gigante de Fogo</option>
+<option value="090">Fada</option>
+<option value="091">Pixie</option>
+<option value="092">Sílfide</option>
+<option value="093">Dríade</option>
+<option value="100">Zumbi</option>
+<option value="101">Zumbi Infectado</option>
+<option value="102">Esqueleto</option>
+<option value="103">Espectro Morto-vivo</option>
+<option value="110">Vampiro(a)</option>
+<option value="111">Vampiro Ancião</option>
+<option value="112">Vampiro Nobre</option>
+<option value="120">Lich</option>
+<option value="121">Necromante Morto-vivo</option>
+<option value="130">Lobisomem</option>
+<option value="131">Metamorfo</option>
+<option value="132">Skinwalker</option>
+<option value="140">Sereia</option>
+<option value="141">Tritão</option>
+<option value="142">Kraken</option>
+<option value="150">Centauro</option>
+<option value="151">Minotauro</option>
+<option value="152">Quimera</option>
+<option value="153">Harpia</option>
+<option value="160">Dragão</option>
+<option value="161">Dragão Ancião</option>
+<option value="162">Dragão Elemental</option>
+<option value="163">Dragão Cósmico</option>
+<option value="170">Titã</option>
+<option value="171">Colosso</option>
+<option value="172">Entidade Primordial</option>
+<option value="180">Alienígena</option>
+<option value="181">Alienígena Humanoide</option>
+<option value="182">Alienígena Insetoide</option>
+<option value="183">Alienígena Energético</option>
+<option value="190">Entidade Dimensional</option>
+<option value="191">Entidade do Caos</option>
+<option value="192">Entidade do Vazio</option>
+<option value="193">Deus Menor</option>
+<option value="194">Deus Antigo</option>
+<option value="200">Outro</option>
+</select> 
+
+<label class="Class">Class</label>: <select id="classe">
+<option value="001" selected >Arqueiro(a)</option>
+<option value="002">Cavaleiro(a)</option>
+<option value="003">Garçon</option>
+<option value="004">Mago/Feiticeira</option>
+<option value="005">Monges</option>
+<option value="006">Campones(a)</option>
+<option value="007">Piratas</option>
+<option value="006">Necromante</option>
+<option value="007">Bruxo(a)</option>
+<option value="008">Hacker/Programador(a)</option>
+<option value="009">Peixe</option>
+<option value="010">Cozinheiro(a)</option>
+<option value="011">Paladino(a)</option>
+<option value="012">Motorista</option>
+<option value="013">Ladrão/Ladra</option>
+<option value="014">Bardo/Músico</option>
+<option value="015">Bárbaro(a)</option>
+<option value="016">Policial</option>
+<option value="017">Sereia/Tritão</option>
+</select> 
+
+RELAÇÂO COM O HEROI: 
+<select id="relacao">
+<option value="001" selected >Nenhuma</option>
+<option value="002">Tio/Tia</option>
+<option value="003">Pai/Mãe</option>
+<option value="004">Irmão/Irmã</option>
+<option value="005">Primo(a)</option>
+<option value="006">Amigo(a)</option>
+<option value="007">Recrutado(a) sob pagamento</option>
+<option value="008">Forçado(a)/Sequestro</option>
+<option value="009">Professor(a)/Mestre(a)</option>
+<option value="010">Tutor(a)</option>
+<option value="011">Padrastro/Madrastra</option>
+<option value="012">Neto(a)</option>
+<option value="013">Vizinho(a)</option>
+<option value="014">Sogro(a)</option>
+<option value="015">Esposo(a)</option>
+<option value="016">Namorado(a)</option>
+<option value="017">Noivo(a)</option>
+<option value="018">Cunhado(a)</option>
+<option value="019">Padrinho/Madrinha</option>
+<option value="020">Avô/Avó</option>
+</select>
+<button class="botoes_randomicos" onclick="sorteia(10);" type="button">!</button></td></tr>
+<tr><td>COAJUVANTE 3</td><td> <input type="text" id="COAJUVANTES3" name="COAJUVANTES3" value=""><select id="genero1" ><option value="X" selected >x</option><option value="F">♀</option><option value="M">♂</option></select>
+RAÇA: <select id="raca">
+<option value="001" selected>Humano(a)</option>
+<option value="002">Animal</option>
+<option value="003">Humano Mutante</option>
+<option value="004">Humano Aprimorado</option>
+<option value="005">Humano Psíquico</option>
+<option value="010">Robô</option>
+<option value="011">Autômato</option>
+<option value="012">Android</option>
+<option value="013">Ciborgue</option>
+<option value="014">Inteligência Artificial</option>
+<option value="020">Fantasma</option>
+<option value="021">Espírito</option>
+<option value="022">Espectro</option>
+<option value="023">Poltergeist</option>
+<option value="024">Entidade Etérea</option>
+<option value="030">Anjo</option>
+<option value="031">Arcanjo</option>
+<option value="032">Querubim</option>
+<option value="033">Serafim</option>
+<option value="040">Demônio</option>
+<option value="041">Arquidemônio</option>
+<option value="042">Íncubo</option>
+<option value="043">Súcubo</option>
+<option value="044">Entidade Abissal</option>
+<option value="050">Elfo(a)</option>
+<option value="051">Elfo Negro (Drow)</option>
+<option value="052">Elfo da Floresta</option>
+<option value="053">Elfo Lunar</option>
+<option value="060">Anão(ã)</option>
+<option value="061">Anão da Montanha</option>
+<option value="062">Anão da Forja</option>
+<option value="070">Orc</option>
+<option value="071">Meio-Orc</option>
+<option value="072">Goblin</option>
+<option value="073">Troll</option>
+<option value="080">Gigante</option>
+<option value="081">Gigante de Pedra</option>
+<option value="082">Gigante de Gelo</option>
+<option value="083">Gigante de Fogo</option>
+<option value="090">Fada</option>
+<option value="091">Pixie</option>
+<option value="092">Sílfide</option>
+<option value="093">Dríade</option>
+<option value="100">Zumbi</option>
+<option value="101">Zumbi Infectado</option>
+<option value="102">Esqueleto</option>
+<option value="103">Espectro Morto-vivo</option>
+<option value="110">Vampiro(a)</option>
+<option value="111">Vampiro Ancião</option>
+<option value="112">Vampiro Nobre</option>
+<option value="120">Lich</option>
+<option value="121">Necromante Morto-vivo</option>
+<option value="130">Lobisomem</option>
+<option value="131">Metamorfo</option>
+<option value="132">Skinwalker</option>
+<option value="140">Sereia</option>
+<option value="141">Tritão</option>
+<option value="142">Kraken</option>
+<option value="150">Centauro</option>
+<option value="151">Minotauro</option>
+<option value="152">Quimera</option>
+<option value="153">Harpia</option>
+<option value="160">Dragão</option>
+<option value="161">Dragão Ancião</option>
+<option value="162">Dragão Elemental</option>
+<option value="163">Dragão Cósmico</option>
+<option value="170">Titã</option>
+<option value="171">Colosso</option>
+<option value="172">Entidade Primordial</option>
+<option value="180">Alienígena</option>
+<option value="181">Alienígena Humanoide</option>
+<option value="182">Alienígena Insetoide</option>
+<option value="183">Alienígena Energético</option>
+<option value="190">Entidade Dimensional</option>
+<option value="191">Entidade do Caos</option>
+<option value="192">Entidade do Vazio</option>
+<option value="193">Deus Menor</option>
+<option value="194">Deus Antigo</option>
+<option value="200">Outro</option>
+</select> 
+
+<label class="Class">Class</label>: <select id="classe">
+<option value="001" selected >Arqueiro(a)</option>
+<option value="002">Cavaleiro(a)</option>
+<option value="003">Garçon</option>
+<option value="004">Mago/Feiticeira</option>
+<option value="005">Monges</option>
+<option value="006">Campones(a)</option>
+<option value="007">Piratas</option>
+<option value="006">Necromante</option>
+<option value="007">Bruxo(a)</option>
+<option value="008">Hacker/Programador(a)</option>
+<option value="009">Peixe</option>
+<option value="010">Cozinheiro(a)</option>
+<option value="011">Paladino(a)</option>
+<option value="012">Motorista</option>
+<option value="013">Ladrão/Ladra</option>
+<option value="014">Bardo/Músico</option>
+<option value="015">Bárbaro(a)</option>
+<option value="016">Policial</option>
+<option value="017">Sereia/Tritão</option>
+</select> 
+
+RELAÇÂO COM O HEROI: 
+<select id="relacao">
+<option value="001" selected >Nenhuma</option>
+<option value="002">Tio/Tia</option>
+<option value="003">Pai/Mãe</option>
+<option value="004">Irmão/Irmã</option>
+<option value="005">Primo(a)</option>
+<option value="006">Amigo(a)</option>
+<option value="007">Recrutado(a) sob pagamento</option>
+<option value="008">Forçado(a)/Sequestro</option>
+<option value="009">Professor(a)/Mestre(a)</option>
+<option value="010">Tutor(a)</option>
+<option value="011">Padrastro/Madrastra</option>
+<option value="012">Neto(a)</option>
+<option value="013">Vizinho(a)</option>
+<option value="014">Sogro(a)</option>
+<option value="015">Esposo(a)</option>
+<option value="016">Namorado(a)</option>
+<option value="017">Noivo(a)</option>
+<option value="018">Cunhado(a)</option>
+<option value="019">Padrinho/Madrinha</option>
+<option value="020">Avô/Avó</option>
+</select>
+<button class="botoes_randomicos" onclick="sorteia(11);" type="button">!</button></td></tr>
+</table>
+</br>
+
+<table border=1>
+<tr><td colspan=2>DETALHES:</td></tr>
+<tr><td>TITULO <input type="text" id="TITULO1" value=""  SIZE=50><button class="botoes_randomicos" onclick="sorteia(21);" type="button">!</button>
+  <input type="text" id="TITULO2" value=""  SIZE=50><button class="botoes_randomicos" onclick="sorteia(22);" type="button">!</button></td></tr>
+<tr><td>OBJETIVO/PROMESSA <input type="text" id="ACAO" value=""  SIZE=50><button class="botoes_randomicos" onclick="sorteia(1);" type="button">!</button></td></tr>
+</table>
+
+</br></br></br>
+<button onclick="gerar();" type="button"><label  class="tail">CREATE TAIL</label></button>
+</br></br></br>
+
+
+<textarea id="story" name="story" rows="50" cols="200">
+
+</textarea>
+
+</br></br>
+<label  class="references">REFERENCES</label>: </br>
+Christopher Vogler</br>
+Joseph Campbell</br>
+https://www.brunocrispim.com/post/o-m%C3%A9todo-save-the-cat</br>
+https://neilpatel.com/br/blog/jornada-do-heroi/</br>
+https://viltoreis.com/save-the-cat/</br>
+https://viltoreis.com/a-jornada-do-heroi/</br>
+http://www.roteirodecinema.com.br/manuais/screenwriter.sites.uol.com.br/dramaturgia.doc.htm</br>
+7 TRAMAS BASICOS - https://medium.com/nano-fregonese/7-tramas-b%C3%A1sicas-para-a-sua-hist%C3%B3ria-e-para-a-sua-marca-6ce7b5bde0e9 - Future Learn, com base no livro de Christopher Booker</br></br>
